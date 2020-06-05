@@ -27,66 +27,40 @@ Domain Path: /languages
     --gray-color: #2a2d2f
 }
 @font-face {
-    font-family: 'Helvetica Neue Cyr';
-    src: url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.eot');
-    src: local('HelveticaNeueCyr-Roman'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff') format('woff'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf') format('truetype');
-    font-weight: 400;
+    font-family: 'Gilroy';
+    src: local('Gilroy'),
+    url('assets/fonts/Gilroy-Bold.woff') format('woff'),
+    url('assets/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Helvetica Neue Cyr';
-    src: url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.eot');
-    src: local('HelveticaNeueCyr-Bold'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff') format('woff'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-family: 'Gilroy';
+    src: local('Gilroy'),
+    url('assets/fonts/Gilroy-Regular.woff') format('woff'),
+    url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Helvetica Neue Cyr';
-    src: url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.eot');
-    src: local('HelveticaNeueCyr-Medium'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.woff') format('woff'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.ttf') format('truetype');
+    font-family: 'Gilroy';
+    src: local('Gilroy'),
+    url('assets/fonts/Gilroy-Medium.woff') format('woff'),
+    url('assets/fonts/Gilroy-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'Helvetica Neue Cyr';
-    src: url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.eot');
-    src: local('HelveticaNeueCyr-Black'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.woff') format('woff'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Helvetica Neue Cyr';
-    src: url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot');
-    src: local('HelveticaNeueCyr-Light'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.woff') format('woff'),
-    url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
+
+
 html {
-    font-family: 'Helvetica Neue Cyr';
-    font-size: 16px;
+    font-family: 'Gilroy';
     font-weight: 400;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 24px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     margin: 0;
@@ -95,10 +69,10 @@ html {
 }
 body {
     margin: 0;
-    font-family: 'Helvetica Neue Cyr';
+    font-family: 'Gilroy';
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 24px;
     position: relative;
     overflow-x: hidden;
 }
@@ -110,7 +84,7 @@ h4,
 h5,
 h6{
     line-height: 1.5;
-    font-family: 'Helvetica Neue Cyr';
+    font-family: 'Gilroy';
 }
 
 .hide-title{
