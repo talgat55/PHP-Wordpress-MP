@@ -5,7 +5,7 @@
 
     ?>
     <div class="container">
-        <div class="row  align-items-center">
+        <div class="row   ">
             <div class="footer__first-row  col-lg-3 col-sm-12  position-relative">
                 <a class="footer-logo" href="<?php echo home_url(); ?>">
                     <svg width="236" height="38" viewBox="0 0 236 38" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@
                     </svg>
                 </a>
                 <div class="footer__phone-block">
-                    <div class="d-flex  align-items-center">
+                    <div>
                         <div class="d-flex align-items-center footer__phone-item">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.7162 10.5022C13.7366 10.5022 12.7747 10.349 11.8633 10.0478C11.4167 9.89542 10.8676 10.0352 10.595 10.3151L8.796 11.6732C6.70963 10.5595 5.42446 9.27475 4.32596 7.20404L5.64408 5.45188C5.98654 5.10988 6.10938 4.61029 5.96221 4.14154C5.65971 3.22529 5.50604 2.26392 5.50604 1.28392C5.50608 0.575958 4.93013 0 4.22221 0H1.28387C0.575958 0 0 0.575958 0 1.28387C0 9.39846 6.60158 16 14.7162 16C15.4241 16 16 15.424 16 14.7161V11.786C16 11.0781 15.424 10.5022 14.7162 10.5022Z" fill="#005BD7"/>
@@ -30,6 +30,9 @@
                             <a href="tel:<?php echo $phone_number_one; ?>">
                                 <?php echo $phone_number_one; ?>
                             </a>
+                        </div>
+                        <div class="header__text-phone">
+                            Бесплатный звонок из любой точки России
                         </div>
                         <div class="d-flex align-items-center footer__phone-item">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,22 +43,55 @@
                             </a>
                         </div>
                     </div>
-                    <div class="header__text-phone">
-                        Бесплатный звонок из любой точки России
-                    </div>
+
                 </div>
             </div>
-            <div class="footer__second-row col-lg-9 col-sm-12  position-relative">
-                <div class="footer__first">
-                    <?php wp_nav_menu('container=div&menu_id=footer-main&menu_class=footer-main-container clearfix&theme_location=top_menu'); ?>
-                </div>
-                <div class="footer__second d-md-flex w-100 align-items-center  justify-content-center ">
-                                            <a target="_blank" class="bottom-copyright" title="Перейти на сайт разработчика"
-                                               href="https://asmart-group.ru/">Cайт создан в IT-company <span>ASMART</span></a>
-                    <a href="/policy" class="link-to-policy">
-                        Политика обработки персональных данных
-                    </a>
-                </div>
+            <div class="footer__second-row col-lg-9 col-sm-12  position-relative d-flex align-items-center">
+              <div class="d-lg-flex  justify-content-between   w-100">
+                  <div class="col-12 col-md-5">
+                          <?php wp_nav_menu('container=div&menu_id=footer-main&menu_class=footer-main-container clearfix&theme_location=top_menu'); ?>
+                  </div>
+                  <div class="col-12 col-md-7 align-items-end  d-flex">
+                      <div class="d-flex   justify-content-between w-100 ">
+                          <div class="footer__other-links   ">
+                              <a href="/policy" class="link-to-policy">
+                                  Политика конфиденциальности
+                              </a>
+                              <a target="_blank" class="bottom-copyright" title="Перейти на сайт разработчика"
+                                 href="https://asmart-group.ru/">Cайт создан в IT-company <span>ASMART</span></a>
+                          </div>
+                          <div  >
+                              <div class="text-right   soc__title">Социальные сети:</div>
+                              <ul class="d-flex  soc-links justify-content-end">
+                                  <li>
+                                      <a href="#"  target="_blank">
+                                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <rect width="21" height="21" rx="2" fill="#005BD7"/>
+                                              <g clip-path="url(#clip0)">
+                                                  <path d="M12.6648 6.15854H13.8516V4.09154C13.6469 4.06338 12.9427 4 12.1226 4C10.4115 4 9.23932 5.07629 9.23932 7.05446V8.875H7.35107V11.1858H9.23932V17H11.5544V11.1863H13.3663L13.6539 8.87554H11.5539V7.28358C11.5544 6.61571 11.7342 6.15854 12.6648 6.15854Z" fill="white"/>
+                                              </g>
+                                              <defs>
+                                                  <clipPath id="clip0">
+                                                      <rect width="13" height="13" fill="white" transform="translate(4 4)"/>
+                                                  </clipPath>
+                                              </defs>
+                                          </svg>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#"  target="_blank">
+                                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <rect width="21" height="21" rx="2" fill="#005BD7"/>
+                                              <path d="M11.3206 14.4355C11.3206 14.4355 11.5612 14.4092 11.6844 14.2793C11.7973 14.1602 11.7934 13.9355 11.7934 13.9355C11.7934 13.9355 11.7784 12.8863 12.2746 12.7314C12.7637 12.5791 13.3917 13.746 14.0582 14.1948C14.5617 14.534 14.9438 14.4598 14.9438 14.4598L16.7248 14.4355C16.7248 14.4355 17.656 14.3791 17.2145 13.6603C17.178 13.6014 16.9569 13.1283 15.8907 12.1566C14.7736 11.1394 14.9236 11.3039 16.2683 9.54421C17.0874 8.47263 17.4147 7.81841 17.3124 7.53867C17.2152 7.2711 16.6126 7.34215 16.6126 7.34215L14.608 7.35431C14.608 7.35431 14.4593 7.33447 14.3491 7.39912C14.2415 7.4625 14.1717 7.61037 14.1717 7.61037C14.1717 7.61037 13.8547 8.43934 13.4315 9.14476C12.5387 10.6324 12.182 10.7112 12.0359 10.619C11.6962 10.4033 11.781 9.75353 11.781 9.29199C11.781 7.84978 12.004 7.24869 11.3473 7.09314C11.1295 7.04129 10.9691 7.00736 10.4115 7.0016C9.69609 6.99456 9.09091 7.00416 8.74789 7.16868C8.51964 7.27814 8.34356 7.52267 8.45116 7.53675C8.58355 7.55404 8.88353 7.61613 9.04265 7.82865C9.24807 8.10327 9.2409 8.71908 9.2409 8.71908C9.2409 8.71908 9.35894 10.4167 8.96505 10.6273C8.69506 10.772 8.32465 10.4769 7.5284 9.12684C7.12081 8.4355 6.813 7.67118 6.813 7.67118C6.813 7.67118 6.75366 7.52843 6.64736 7.45161C6.51889 7.3588 6.33956 7.32999 6.33956 7.32999L4.43467 7.34215C4.43467 7.34215 4.14839 7.34983 4.04339 7.4721C3.95014 7.58028 4.03622 7.80497 4.03622 7.80497C4.03622 7.80497 5.52765 11.2303 7.21668 12.9568C8.76549 14.5392 10.5236 14.4355 10.5236 14.4355H11.3206Z" fill="white"/>
+                                          </svg>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
     </div>

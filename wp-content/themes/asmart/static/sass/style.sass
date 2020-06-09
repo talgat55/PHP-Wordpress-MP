@@ -123,12 +123,84 @@ $gray_color: #2a2d2f
       position: absolute
       top: 0
       right: 0
+      z-index: -1
 
 
   &__first-row
-    background: #D7ECF8
-
+    padding: 21px 0 25px
+    &:before
+      background: #D7ECF8
+      width: 300%
   &__second-row
-    background: #ECF5FA
+    padding: 21px 0  25px
+    &:before
+      background: #ECF5FA
+      width: 300%
+      left: 0
+      right: auto
 
+
+  .footer-logo
+    display: inline-block
+    margin-bottom: 25px
+
+  &__phone-block
+    svg
+      margin-right: 11px
+    a
+      font-weight: normal
+      font-size: 16px
+      line-height: 19px
+      color: #000000
+
+  .header__text-phone
+    margin-bottom: 11px
+    margin-left: 25px
+
+  .soc-links
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+
+      a
+        list-style: none
+        margin-left: 6px
+        &:hover
+          list-style: none
+          opacity: .5
+    li:first-child
+      a
+        margin-left: 0
+  .soc__title
+    white-space: nowrap
+  &__other-links
+    a
+      display: block
+      font-weight: 500
+      font-size: 16px
+      line-height: 19px
+      color: #424242
+
+
+
+  .footer-main-container
+    column-count: 2
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      a
+        text-decoration: none
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        color: #424242
+
+    .no-footer
+      display: none!important
+
+
+  .bottom-copyright
+    white-space: nowrap
 
