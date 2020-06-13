@@ -15,6 +15,23 @@ $theme_color: #005BD7
 $theme_color_alt: #1bb684
 $gray_color: #2a2d2f
 
+.link
+  font-weight: 500
+  font-size: 15px
+  line-height: 22px
+  text-align: center
+  color: #FFFFFF
+  display: inline-block
+  text-transform: uppercase
+  padding: 12px 32px
+  transition: all .3s
+  background: linear-gradient(89.41deg, #005CD7 -11.83%, #179EDE 110.67%)
+  &:hover
+    text-decoration: none
+    background: linear-gradient(89.41deg, #424242 -11.83%, #424242 110.67%)
+    color: #fff
+
+
 
 //
 //  Header
@@ -105,7 +122,76 @@ $gray_color: #2a2d2f
           &:hover
             text-decoration: underline
 
+//
+// Home slider
+//
+.home-slider_slider
 
+  .home-slider_slider__item
+    height: 530px
+
+
+.home-slider
+  position: relative
+  &__content
+    text-align: center
+    max-width: 625px
+    margin: 0 auto
+  &__title
+    font-weight: bold
+    font-size: 45px
+    line-height: 42px
+    color: #424242
+    margin: 0 0 9px
+
+  &__text
+    font-weight: 500
+    font-size: 16px
+    line-height: 21px
+    color: #424242
+    margin-bottom: 26px
+
+  &__arrows
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    .arrows
+      top: 265px
+      transform: translateY(-50%)
+      position: absolute
+      background: #fff
+      transition: all .3s
+      &:hover
+        opacity: .5
+      &.left
+        left: -30px
+      &.right
+        right: -30px
+  .slick-dots
+    bottom: 15px
+
+    button
+      padding: 0
+      width: 6px
+      height: 6px
+      background: #ECF5FA
+      border-radius: 50%
+      &:before
+        display: none
+    li
+      width: 10px
+      height: 10px
+
+    .slick-active
+      button
+        padding: 0
+        width: 10px
+        height: 10px
+        background: $theme_color
+
+  .slick-dotted.slick-slider
+    margin: 0
 
 
 
@@ -186,7 +272,7 @@ $gray_color: #2a2d2f
 
   .footer-main-container
     column-count: 2
-    margin: 0
+    margin: 0 0 0 45px
     padding: 0
     li
       list-style: none

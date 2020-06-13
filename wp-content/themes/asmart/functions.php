@@ -15,14 +15,14 @@ if (function_exists('register_nav_menus')) {
 * Add Feature Imagee
 **/
 add_theme_support('post-thumbnails');
-add_image_size('client-img', 165, 165, true);
-add_image_size('partners-img', 225, '', false);
-add_image_size('awards-img', 250, 350, true);
-add_image_size('review-img', 210, 60, false);
-add_image_size('portfolio-img', 400, 400, true);
-add_image_size('portfolio-page-img', 360, 359, true);
-add_image_size('service-home-img', 368, 389, true);
-add_image_size('service-detail-img', 390, 378, true);
+//add_image_size('client-img', 165, 165, true);
+//add_image_size('partners-img', 225, '', false);
+//add_image_size('awards-img', 250, 350, true);
+//add_image_size('review-img', 210, 60, false);
+//add_image_size('portfolio-img', 400, 400, true);
+//add_image_size('portfolio-page-img', 360, 359, true);
+//add_image_size('service-home-img', 368, 389, true);
+//add_image_size('service-detail-img', 390, 378, true);
 
 
 /**

@@ -52,7 +52,7 @@
                           <?php wp_nav_menu('container=div&menu_id=footer-main&menu_class=footer-main-container clearfix&theme_location=top_menu'); ?>
                   </div>
                   <div class="col-12 col-md-7 align-items-end  d-flex">
-                      <div class="d-flex   justify-content-between w-100 ">
+                      <div class="d-flex   justify-content-between w-100 align-items-end">
                           <div class="footer__other-links   ">
                               <a href="/policy" class="link-to-policy">
                                   Политика конфиденциальности

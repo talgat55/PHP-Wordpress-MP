@@ -1,3 +1,23 @@
+.link {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  background: -o-linear-gradient(0.59deg, #005CD7 -11.83%, #179EDE 110.67%);
+  background: linear-gradient(89.41deg, #005CD7 -11.83%, #179EDE 110.67%); }
+  .link:hover {
+    text-decoration: none;
+    background: -o-linear-gradient(0.59deg, #424242 -11.83%, #424242 110.67%);
+    background: linear-gradient(89.41deg, #424242 -11.83%, #424242 110.67%);
+    color: #fff; }
+
 .header__top {
   padding: 21px 0; }
 
@@ -85,6 +105,69 @@
         .header__bottom .main-main-container li a:hover {
           text-decoration: underline; }
 
+.home-slider_slider .home-slider_slider__item {
+  height: 530px; }
+
+.home-slider {
+  position: relative; }
+  .home-slider__content {
+    text-align: center;
+    max-width: 625px;
+    margin: 0 auto; }
+  .home-slider__title {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 42px;
+    color: #424242;
+    margin: 0 0 9px; }
+  .home-slider__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #424242;
+    margin-bottom: 26px; }
+  .home-slider__arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .home-slider__arrows .arrows {
+      top: 265px;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      position: absolute;
+      background: #fff;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .home-slider__arrows .arrows:hover {
+        opacity: .5; }
+      .home-slider__arrows .arrows.left {
+        left: -30px; }
+      .home-slider__arrows .arrows.right {
+        right: -30px; }
+  .home-slider .slick-dots {
+    bottom: 15px; }
+    .home-slider .slick-dots button {
+      padding: 0;
+      width: 6px;
+      height: 6px;
+      background: #ECF5FA;
+      border-radius: 50%; }
+      .home-slider .slick-dots button:before {
+        display: none; }
+    .home-slider .slick-dots li {
+      width: 10px;
+      height: 10px; }
+    .home-slider .slick-dots .slick-active button {
+      padding: 0;
+      width: 10px;
+      height: 10px;
+      background: #005BD7; }
+  .home-slider .slick-dotted.slick-slider {
+    margin: 0; }
+
 .footer__second-row:before, .footer__first-row:before {
   content: "";
   display: block;
@@ -154,7 +237,7 @@
   -webkit-column-count: 2;
      -moz-column-count: 2;
           column-count: 2;
-  margin: 0;
+  margin: 0 0 0 45px;
   padding: 0; }
   .footer .footer-main-container li {
     list-style: none; }
