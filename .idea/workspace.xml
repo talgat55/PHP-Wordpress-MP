@@ -1,58 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass" line="136" />
+    <bookmark url="file://$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass" line="143" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f56f99e9-97a5-4c3b-9ae2-731b56ec5a80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/asmart/inc/homeCatBlock.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/admin-network-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/admin-network-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/admin-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/admin-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/continents-cities-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/continents-cities-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/plugins/akismet-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/plugins/akismet-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/plugins/hello-dolly-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/plugins/hello-dolly-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/plugins/woocommerce-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/plugins/woocommerce-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/themes/twentynineteen-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/themes/twentynineteen-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/themes/twentyseventeen-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/themes/twentyseventeen-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/themes/twentysixteen-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/themes/twentysixteen-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/themes/twentytwenty-ru_RU.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/themes/twentytwenty-ru_RU.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/archive.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/bvi.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/bvi.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/fontawesome-all.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/fontawesome-all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/slick-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/slick.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/aos.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/aos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/bootstrap.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery-3.2.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery-migrate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery-migrate.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery.lazy.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery.lazy.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery.matchHeight.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/jquery.matchHeight.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/lightbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/lightbox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/lightbox.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/slick.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/front-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/front-page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/page-archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/page-archive.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/page-brendmur.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/page-brendmur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/page-review.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/page-review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/page-uslugi.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/page-uslugi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/single-services.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/single-services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/single.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/static/sass/critical.sass" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/static/sass/critical.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,19 +27,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/inc/homeSlider.php">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="218">
+              <caret line="236" column="19" lean-forward="true" selection-start-line="236" selection-start-column="19" selection-end-line="236" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/front-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="186" column="12" lean-forward="true" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="12" />
+            <state relative-caret-position="414">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -88,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="716" column="23" selection-start-line="716" selection-start-column="23" selection-end-line="716" selection-end-column="23" />
+            <state relative-caret-position="369">
+              <caret line="84" column="33" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -97,16 +56,30 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/inc/homeCatBlock.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="38" column="60" lean-forward="true" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-598">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="276">
+              <caret line="36" column="94" lean-forward="true" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lasyLoad</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,10 +88,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asmart/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/inc/homeSlider.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/inc/homeCatBlock.php" />
       </list>
     </option>
   </component>
@@ -129,12 +105,15 @@
     <option name="height" value="1000" />
   </component>
   <component name="ProjectId" id="1creEW8dCxUYFDY8JJGFQ70EADi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,11 +139,18 @@
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="asmart" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="medipart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medipart" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="asmart" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -215,18 +201,19 @@
       <workItem from="1591392302166" duration="8279000" />
       <workItem from="1591415390096" duration="658000" />
       <workItem from="1591723239382" duration="703000" />
-      <workItem from="1591993251374" duration="6610000" />
+      <workItem from="1591993251374" duration="8076000" />
+      <workItem from="1592099253091" duration="5174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7971000" />
+    <option name="totallyTimeSpent" value="14611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -242,7 +229,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32998884" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.12374582" />
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="bottom" id="GraphQL" order="13" weight="0.32998884" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -277,16 +264,6 @@
     <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1591379790283" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-598">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3485">
@@ -304,24 +281,65 @@
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/inc/homeSlider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="236" column="19" lean-forward="true" selection-start-line="236" selection-start-column="19" selection-end-line="236" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="36" column="94" lean-forward="true" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1244">
+          <caret line="50" column="58" lean-forward="true" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-brendmur.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="716" column="23" selection-start-line="716" selection-start-column="23" selection-end-line="716" selection-end-column="23" />
+        <state relative-caret-position="369">
+          <caret line="84" column="33" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="33" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/static/sass/style.sass">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/inc/homeCatBlock.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="186" column="12" lean-forward="true" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="12" />
+        <state relative-caret-position="264">
+          <caret line="38" column="60" lean-forward="true" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
         </state>
       </provider>
     </entry>

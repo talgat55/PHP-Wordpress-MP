@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
     "use strict";
 
     homeSlider();
-    // lasyLoad();
+    lasyLoad();
 
     // ajaxLoadData();
     // mobileMenu();
@@ -78,20 +78,20 @@ jQuery(document).ready(function () {
 //----------------------------------
 //   Lasyload
 //---------------------------------------
-//
-// function lasyLoad() {
-//     "use strict";
-//
-//     var lasyClass = jQuery('.lazy');
-//
-//     if (lasyClass.length) {
-//         lasyClass.lazy({
-//             effect: "fadeIn",
-//             effectTime: 700,
-//         });
-//     }
-//
-// }
+
+function lasyLoad() {
+    "use strict";
+
+    var lasyClass = jQuery('.lazy');
+
+    if (lasyClass.length) {
+        lasyClass.lazy({
+            effect: "fadeIn",
+            effectTime: 700,
+        });
+    }
+
+}
 
 // // ---------------------------------------------------------
 // // Back To Top
