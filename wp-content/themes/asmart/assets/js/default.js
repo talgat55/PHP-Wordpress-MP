@@ -718,7 +718,7 @@ function homeSlider() {
 
 
 //----------------------------------
-//   Review slider
+//   Popular slider
 //---------------------------------------
 
 function popularCarousel() {

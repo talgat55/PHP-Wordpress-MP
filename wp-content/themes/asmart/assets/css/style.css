@@ -273,7 +273,7 @@
       margin: 18px 0 0; }
 
 .home-popular-items {
-  margin: 30px 0 89px 0; }
+  margin: 60px 0 89px 0; }
   .home-popular-items .popular-product__list {
     margin: 0;
     padding: 0;
@@ -330,6 +330,14 @@
     left: -49px; }
   .home-popular-items .slick-prev:hover {
     opacity: .5; }
+
+.home-service {
+  background: #ECF5FA;
+  padding: 66px 0 80px; }
+  .home-service__text {
+    margin-bottom: 33px; }
+  .home-service__image {
+    position: absolute; }
 
 .footer__second-row:before, .footer__first-row:before {
   content: "";
