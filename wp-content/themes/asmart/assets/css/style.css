@@ -432,6 +432,37 @@
     display: -ms-flexbox;
     display: flex; }
 
+.home__about {
+  margin: 80px 0 33px; }
+  .home__about .home__text-about {
+    margin-bottom: 33px; }
+  .home__about .home__link-about p {
+    margin: 0 0 0 5px; }
+  .home__about .home__link-about {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #005BD7;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    white-space: nowrap; }
+  .home__about .home__title-box {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #424242;
+    margin: 10px 0 67px; }
+  .home__about .home__box-item:nth-of-type(4n+3) .home__title-box,
+  .home__about .home__box-item:nth-of-type(4n+4) .home__title-box {
+    margin-bottom: 0; }
+  .home__about .home__first-about {
+    background: #ECF5FA;
+    padding: 61px 0 80px 26px; }
+  .home__about .home__second-about {
+    padding-left: 61px; }
+  .home__about .link {
+    margin-right: 35px; }
+
 .footer__second-row:before, .footer__first-row:before {
   content: "";
   display: block;
