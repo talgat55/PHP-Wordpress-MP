@@ -7,9 +7,9 @@ jQuery(document).ready(function () {
 
     homeSlider();
     lasyLoad();
+    newsArticlesCarousel();
 
-
-
+    clickByCatsNewsArticles();
     popularCarousel();
     // ajaxLoadData();
     // mobileMenu();
@@ -745,3 +745,52 @@ function popularCarousel() {
         });
     }
 }
+
+//----------------------------------
+//   News Articles carousel
+//---------------------------------------
+
+function newsArticlesCarousel() {
+    "use strict";
+    var carouselClass = jQuery('.home-news-articles__carousel');
+
+    if (carouselClass.length) {
+        carouselClass.slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            // lazyLoad: 'ondemand',
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 690,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                    }
+                }
+            ],
+
+        });
+    }
+}
+
+//---------------------------------------
+//   Home click by News Articles
+//---------------------------------------
+
+function clickByCatsNewsArticles() {
+    "use strict";
+
+        jQuery(document).on('click', '.home-news-articles__cats a', function (e) {
+            e.preventDefault();
+            var thisElement = jQuery(this);
+            var thisId = thisElement.attr("data-id");
+            jQuery('.home-news-articles__cats a , .home-news-articles__content').removeClass('active');
+            thisElement.addClass('active');
+            jQuery('.home-news-articles__content.'+thisId).addClass('active');
+
+        });
+}
+

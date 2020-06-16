@@ -16,7 +16,8 @@ if (function_exists('register_nav_menus')) {
 **/
 add_theme_support('post-thumbnails');
 add_image_size('product-popular', 272, 307, false);
-//add_image_size('partners-img', 225, '', false);
+add_image_size('home-news-articles', 286, 154, false);
+
 //add_image_size('awards-img', 250, 350, true);
 //add_image_size('review-img', 210, 60, false);
 //add_image_size('portfolio-img', 400, 400, true);

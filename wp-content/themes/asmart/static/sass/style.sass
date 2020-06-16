@@ -331,7 +331,8 @@ $gray_color: #2a2d2f
         img
           margin: 0 auto
 
-
+.home-popular-items,
+.home-news-articles
   .slick-arrow
     width: 45px
     height: 44px
@@ -344,8 +345,6 @@ $gray_color: #2a2d2f
     background: url('../images/arrow.png')
     transform:  translate(0, -50%)
     right: -49px
-  .slick-next
-    opacity: .5
 
   .slick-prev:active,
   .slick-prev:focus,
@@ -353,8 +352,12 @@ $gray_color: #2a2d2f
     background: url('../images/arrow.png')
     transform: rotateZ(180deg) translate(0, 50%)
     left: -49px
+
+  .slick-next:hover,
   .slick-prev:hover
-    opacity: .5
+    opacity: .5!important
+    background: url('../images/arrow.png')!important
+
 
 //
 // Home service
@@ -368,6 +371,97 @@ $gray_color: #2a2d2f
 
   &__image
     position: absolute
+
+//
+// Home news articles
+//
+.home-news-articles
+  margin: 66px 0 40px 0
+  overflow: hidden
+  &__cats
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      a
+        text-decoration: none
+        display: inline-block
+        font-weight: 600
+        font-size: 15px
+        line-height: 18px
+        color: #C6C6C6
+        padding: 10px 10px
+        border-bottom:  1px solid #C6C6C6
+        transition: all .3s
+        text-transform: uppercase
+
+
+        &.active
+          color: $theme_color
+          border-color: $theme_color
+  &__wrapper
+    //overflow: hidden
+
+  &__content
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    &.active
+      opacity: 1
+      visibility: visible
+      position: relative
+  &__image-carousel
+    min-height: 154px
+    background: #fff
+    position: relative
+    img
+      width: 100%
+      max-width: 365px
+
+
+  &__title-carousel
+    font-weight: 500
+    font-size: 15px
+    line-height: 18px
+    color: #424242
+    margin: 0 0 5px
+    min-height: 35px
+
+  &__text-carousel
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    color: #7D7D7D
+    margin-bottom: 7px
+    p
+      margin: 0
+
+  &__link
+    font-weight: 600
+    font-size: 15px
+    line-height: 18px
+    color: #005BD7
+    display: inline-block
+
+  &__item-content
+    border-right: 1px solid #ECF5FA
+    border-left: 1px solid #ECF5FA
+    border-bottom: 1px solid #ECF5FA
+    //box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1)
+    border-radius: 2px
+    padding: 13px 8px 18px
+
+  &__item_wrapper
+    margin: 0 4px
+
+
+.home-news-articles__carousel
+  margin: 0 -4px
+  padding: 0
+
+  li
+    list-style: none
+    display: flex
 
 //
 // Footer
