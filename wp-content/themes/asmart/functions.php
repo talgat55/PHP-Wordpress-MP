@@ -244,32 +244,6 @@ function post_type_home_slider()
 //
 //
 //
-///*
-//*  Register Post Type  QA
-//*/
-//add_action('init', 'post_type_qa');
-//
-//function post_type_qa()
-//{
-//    $labels = array(
-//        'name' => 'Часто задаваемые вопросы',
-//        'singular_name' => 'Часто задаваемые вопросы',
-//        'all_items' => 'Часто задаваемые вопросы',
-//        'menu_name' => 'Часто задаваемые вопросы' // ссылка в меню в админке
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//        'query_var' => "qa",
-//        'supports' => array(
-//            'title',
-//            'editor'
-//        )
-//    );
-//    register_post_type('qa', $args);
-//}
 
 /*
 *  Register Post Type Settings
@@ -393,6 +367,32 @@ if (function_exists('acf_add_options_page')) {
 //add_action('wp_ajax_be_ajax_review_load', 'be_ajax_review_load');
 //add_action('wp_ajax_nopriv_be_ajax_review_load', 'be_ajax_review_load');
 
+/*
+*  Register Post Type   Partners
+*/
+add_action('init', 'post_type_partners');
+
+function post_type_partners()
+{
+    $labels = array(
+        'name' => 'Партнеры',
+        'singular_name' => 'Партнеры',
+        'all_items' => 'Партнеры',
+        'menu_name' => 'Партнеры' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "partners",
+        'supports' => array(
+            'title',
+            'thumbnail'
+        )
+    );
+    register_post_type('partners', $args);
+}
 
 
 

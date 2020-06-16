@@ -11,6 +11,7 @@ jQuery(document).ready(function () {
 
     clickByCatsNewsArticles();
     popularCarousel();
+    homePartnersCarousel();
     // ajaxLoadData();
     // mobileMenu();
     // phoneMask();
@@ -793,4 +794,35 @@ function clickByCatsNewsArticles() {
 
         });
 }
+//----------------------------------
+//   Partners carousel
+//---------------------------------------
+
+function homePartnersCarousel() {
+    "use strict";
+    var carouselClass = jQuery('.home-partners__carousel');
+
+    if (carouselClass.length) {
+        carouselClass.slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            lazyLoad: 'ondemand',
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 690,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                    }
+                }
+            ],
+
+        });
+    }
+}
+
+
 

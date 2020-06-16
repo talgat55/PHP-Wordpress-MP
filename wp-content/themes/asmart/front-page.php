@@ -14,5 +14,6 @@ get_header();
 <?php get_template_part('inc/homeService'); ?>
 <?php get_template_part('inc/homeNewsPromo'); ?>
 <?php get_template_part('inc/homeAbout'); ?>
+<?php get_template_part('inc/homePartners'); ?>
 
 <?php get_footer();
