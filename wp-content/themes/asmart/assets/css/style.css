@@ -568,6 +568,15 @@
         line-height: 18px;
         color: #424242;
         margin: 0 0 5px; }
+        .news-articles__product-list li .news-articles__item-content .news-articles__title a {
+          text-decoration: none;
+          color: #424242;
+          -webkit-transition: all .3s;
+          -o-transition: all .3s;
+          transition: all .3s; }
+          .news-articles__product-list li .news-articles__item-content .news-articles__title a:hover {
+            text-decoration: none;
+            color: #005BD7; }
       .news-articles__product-list li .news-articles__item-content .news-articles____text {
         font-weight: 500;
         font-size: 12px;
