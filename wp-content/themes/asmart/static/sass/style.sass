@@ -26,6 +26,7 @@ $gray_color: #2a2d2f
   padding: 12px 32px
   transition: all .3s
   background: linear-gradient(89.41deg, #005CD7 -11.83%, #179EDE 110.67%)
+
   &:hover
     text-decoration: none
     background: linear-gradient(89.41deg, #424242 -11.83%, #424242 110.67%)
@@ -40,11 +41,10 @@ $gray_color: #2a2d2f
   color: #005BD7
   display: inline-block
   white-space: nowrap
-  transition:  all .3s
+  transition: all .3s
+
   &:hover
     color: #424242
-
-
 
 
 .main-title
@@ -55,6 +55,51 @@ $gray_color: #2a2d2f
   margin: 0 0 38px
   width: 100%
   text-align: left
+
+
+.heading-title
+  font-weight: bold
+  font-size: 35px
+  line-height: 42px
+  color: #424242
+  margin: 0 0 38px
+
+
+//
+// Breadcrumb
+//
+.breadcrumbs-section
+  background: #ECF5FA
+
+.breadcrumbs
+  display: flex
+  align-items: center
+  margin-top: 45px
+
+  li
+    list-style: none
+
+    a
+      font-weight: 300
+      font-size: 12px
+      line-height: 14px
+      color: #424242
+      text-decoration: none
+      transition: all .3s
+      display: inline-block
+
+      &:hover
+        color: $theme_color
+        text-decoration: none
+
+  .current
+    font-weight: 300
+    font-size: 12px
+    line-height: 24px
+    color: #9D9D9D
+
+  .sep
+    padding: 0 3px 0 4px
 
 //
 //  Header
@@ -69,28 +114,29 @@ $gray_color: #2a2d2f
   &__link-cart
     text-decoration: none
     position: relative
+
     &:hover
       text-decoration: none
 
-  &__cart
-    .counter
-      font-family: Roboto
-      font-weight: bold
-      font-size: 10px
-      line-height: 12px
-      color: $theme_color
-      padding: 2.5px 5.2px
-      background: #F3F3F3
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)
-      border-radius: 50%
-      position: absolute
-      top: -10px
-      right: -13px
+  &__cart .counter
+    font-family: Roboto
+    font-weight: bold
+    font-size: 10px
+    line-height: 12px
+    color: $theme_color
+    padding: 2.5px 5.2px
+    background: #F3F3F3
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)
+    border-radius: 50%
+    position: absolute
+    top: -10px
+    right: -13px
 
 
   &__search-block
     margin-right: 12px
     transition: all .3s
+
     &:hover
       opacity: .5
 
@@ -99,6 +145,7 @@ $gray_color: #2a2d2f
 
   &__phone-item
     margin-right: 68px
+
     a
       font-family: Gilroy
       font-weight: normal
@@ -130,6 +177,7 @@ $gray_color: #2a2d2f
       display: -webkit-box
       display: -ms-flexbox
       display: flex
+
       li
         list-style: none
 
@@ -142,6 +190,7 @@ $gray_color: #2a2d2f
           text-decoration: none
           transition: all .3s
           margin: 0 40px
+
           &:hover
             text-decoration: underline
 
@@ -156,10 +205,12 @@ $gray_color: #2a2d2f
 
 .home-slider
   position: relative
+
   &__content
     text-align: center
     max-width: 625px
     margin: 0 auto
+
   &__title
     font-weight: bold
     font-size: 45px
@@ -179,18 +230,23 @@ $gray_color: #2a2d2f
     top: 0
     left: 0
     width: 100%
+
     .arrows
       top: 265px
       transform: translateY(-50%)
       position: absolute
       background: #fff
       transition: all .3s
+
       &:hover
         opacity: .5
+
       &.left
         left: -30px
+
       &.right
         right: -30px
+
   .slick-dots
     bottom: 15px
 
@@ -200,8 +256,10 @@ $gray_color: #2a2d2f
       height: 6px
       background: #ECF5FA
       border-radius: 50%
+
       &:before
         display: none
+
     li
       width: 10px
       height: 10px
@@ -230,6 +288,7 @@ $gray_color: #2a2d2f
   grid-template-rows: 1fr 1fr
   gap: 9px 9px
   grid-template-areas: "one two tree" "four five tree"
+
   & *:after
     content:attr(class)
     position: absolute
@@ -243,14 +302,19 @@ $gray_color: #2a2d2f
 
   .one
     grid-area: one
+
   .two
     grid-area: two
+
   .tree
     grid-area: tree
+
   .four
     grid-area: four
+
   .five
     grid-area: five
+
   a
     padding: 9px 13px
     display: flex
@@ -258,14 +322,16 @@ $gray_color: #2a2d2f
     justify-content: center
     height: 100%
     flex-direction: column
+
     img
       min-height: 190px
 
     &:hover
       text-decoration: none
+
       &:before
-        visibility: visible!important
-        opacity: 1!important
+        visibility: visible !important
+        opacity: 1 !important
 
     &:before
       content: ""
@@ -278,10 +344,11 @@ $gray_color: #2a2d2f
       transition: all .3s
       background-color: rgba(236, 245, 250, .8)
       background-image: url(../images/arrow.png)
-      background-repeat: no-repeat!important
+      background-repeat: no-repeat !important
       background-position: center center
       opacity: 0
       visibility: hidden
+
     .products-cat__title
       font-weight: normal
       font-size: 20px
@@ -304,13 +371,13 @@ $gray_color: #2a2d2f
 
     li
       list-style: none
+
       a
         margin: 0 9px
         display: inline-block
 
       a:hover
         text-decoration: none
-
 
 
       .popular-product__title
@@ -328,14 +395,17 @@ $gray_color: #2a2d2f
         min-height: 315px
         text-align: center
         border: 1px solid #ECF5FA
+
         img
           margin: 0 auto
+
 .home-partners,
 .home-popular-items,
 .home-news-articles
   .slick-arrow
     width: 45px
     height: 44px
+
     &:before
       display: none
 
@@ -343,7 +413,7 @@ $gray_color: #2a2d2f
   .slick-next:focus,
   .slick-next
     background: url('../images/arrow.png')
-    transform:  translate(0, -50%)
+    transform: translate(0, -50%)
     right: -49px
 
   .slick-prev:active,
@@ -355,8 +425,8 @@ $gray_color: #2a2d2f
 
   .slick-next:hover,
   .slick-prev:hover
-    opacity: .5!important
-    background: url('../images/arrow.png')!important
+    opacity: .5 !important
+    background: url('../images/arrow.png') !important
 
 
 //
@@ -378,11 +448,14 @@ $gray_color: #2a2d2f
 .home-news-articles
   margin: 66px 0 40px 0
   overflow: hidden
+
   &__cats
     margin: 0
     padding: 0
+
     li
       list-style: none
+
       a
         text-decoration: none
         display: inline-block
@@ -391,7 +464,7 @@ $gray_color: #2a2d2f
         line-height: 18px
         color: #C6C6C6
         padding: 10px 10px
-        border-bottom:  1px solid #C6C6C6
+        border-bottom: 1px solid #C6C6C6
         transition: all .3s
         text-transform: uppercase
 
@@ -399,21 +472,25 @@ $gray_color: #2a2d2f
         &.active
           color: $theme_color
           border-color: $theme_color
+
   &__wrapper
-    //overflow: hidden
+  //overflow: hidden
 
   &__content
     position: absolute
     opacity: 0
     visibility: hidden
+
     &.active
       opacity: 1
       visibility: visible
       position: relative
+
   &__image-carousel
     min-height: 154px
     background: #fff
     position: relative
+
     img
       width: 100%
       max-width: 365px
@@ -433,6 +510,7 @@ $gray_color: #2a2d2f
     line-height: 15px
     color: #7D7D7D
     margin-bottom: 7px
+
     p
       margin: 0
 
@@ -477,6 +555,7 @@ $gray_color: #2a2d2f
     &__link-about
       p
         margin: 0 0 0 5px
+
     &__link-about
       font-weight: 600
       font-size: 15px
@@ -492,12 +571,15 @@ $gray_color: #2a2d2f
       line-height: 18px
       color: #424242
       margin: 10px 0 67px
+
     &__box-item:nth-of-type(4n+3) .home__title-box,
     &__box-item:nth-of-type(4n+4) .home__title-box
       margin-bottom: 0
+
     &__first-about
       background: #ECF5FA
       padding: 61px 0 80px 26px
+
     &__second-about
       padding-left: 61px
 
@@ -507,10 +589,103 @@ $gray_color: #2a2d2f
 
 .home-partners
   margin: 68px 0 78px
+
   .home-partners__carousel
     width: 100%
+
   .home-partners__item
-      height: 57px
+    height: 57px
+
+//
+// News Articles page
+//
+.news-articles__cats
+  margin: 30px 0 24px 0
+  padding: 0
+
+  li
+    list-style: none
+
+  .news-articles__cats-item
+    display: block
+    text-align: center
+    padding: 10px
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: #C6C6C6
+    text-transform: uppercase
+    border-bottom: 1px solid
+
+    &.active
+      color: #005BD7
+
+    &:hover
+      text-decoration: none
+      color: #333
+      border-color: #333
+
+  .home-news-articles__cats-row
+    padding: 0
+
+.news-articles__product-list
+  padding: 0
+  margin: 0 -5px
+  li
+    list-style: none
+    &.news-articles__item
+      padding: 0 5px 10px 5px
+    .news-articles__image
+      img
+        max-width: 100%
+        width: 100%
+    .news-articles__item-content
+      padding: 13px 8px 16px 8px
+      border: 1px solid #ECF5FA
+      border-bottom-left-radius: 2px
+      border-bottom-right-radius: 2px
+
+      .news-articles__title
+        font-weight: 500
+        font-size: 15px
+        line-height: 18px
+        color: #424242
+        margin: 0 0 5px
+
+      .news-articles____text
+        font-weight: 500
+        font-size: 12px
+        line-height: 15px
+        color: #7D7D7D
+        margin-bottom: 7px
+
+      .news-articles____link
+        font-weight: 600
+        font-size: 15px
+        line-height: 18px
+        color: #005BD7
+
+
+.news-articles-page
+  .load-more__row
+    margin:  15px 0 69px
+
+
+
+.load-more
+  &.load
+    position: relative
+    &:before
+      content: ""
+      display: block
+      width: 12px
+      height: 12px
+      background: url(../images/loading-small.gif)
+      background-repeat: no-repeat!important
+      position: absolute
+      top: 15px
+      right: -29px
+
 
 //
 // Footer
@@ -531,11 +706,14 @@ $gray_color: #2a2d2f
 
   &__first-row
     padding: 21px 0 25px
+
     &:before
       background: #D7ECF8
       width: 300%
+
   &__second-row
-    padding: 21px 0  25px
+    padding: 21px 0 25px
+
     &:before
       background: #ECF5FA
       width: 300%
@@ -550,6 +728,7 @@ $gray_color: #2a2d2f
   &__phone-block
     svg
       margin-right: 11px
+
     a
       font-weight: normal
       font-size: 16px
@@ -563,20 +742,25 @@ $gray_color: #2a2d2f
   .soc-links
     margin: 0
     padding: 0
+
     li
       list-style: none
 
       a
         list-style: none
         margin-left: 6px
+
         &:hover
           list-style: none
           opacity: .5
+
     li:first-child
       a
         margin-left: 0
+
   .soc__title
     white-space: nowrap
+
   &__other-links
     a
       display: block
@@ -586,13 +770,14 @@ $gray_color: #2a2d2f
       color: #424242
 
 
-
   .footer-main-container
     column-count: 2
     margin: 0 0 0 45px
     padding: 0
+
     li
       list-style: none
+
       a
         text-decoration: none
         font-weight: 500
@@ -601,7 +786,7 @@ $gray_color: #2a2d2f
         color: #424242
 
     .no-footer
-      display: none!important
+      display: none !important
 
 
   .bottom-copyright

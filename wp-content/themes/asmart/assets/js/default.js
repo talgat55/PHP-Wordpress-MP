@@ -12,6 +12,8 @@ jQuery(document).ready(function () {
     clickByCatsNewsArticles();
     popularCarousel();
     homePartnersCarousel();
+    loadMoreNews();
+    switchContentNewsArticles();
     // ajaxLoadData();
     // mobileMenu();
     // phoneMask();
@@ -622,44 +624,7 @@ function lasyLoad() {
 //     });
 
 
-    //
-    // Load more  review
-    //
-//     thisBody.on('click', '.page-reviews .load-more', function (e) {
-//         e.preventDefault();
-//         var thisClick = jQuery(this);
-//         thisClick.addClass('load');
-//         var $page = jQuery(this).attr('data-page');
-//         var data = {
-//             action: 'be_ajax_review_load',
-//             page: $page,
-//         };
-//         jQuery(this).attr('data-page', ++$page);
-//
-//         jQuery.post(myajax.url, data, function (res) {
-//             if (res.success) {
-//                 if (res.data != '') {
-//                     thisClick.removeClass('load');
-//                     jQuery('.page-reviews__list-items')
-//                         .append(res.data.data);
-//
-//                     var countCurrentItem = jQuery('.page-reviews__list-items li').length;
-//                     var ajaxCount = res.data.count.publish;
-//
-//                     if (countCurrentItem == ajaxCount || countCurrentItem > ajaxCount) {
-//                         jQuery('.page-reviews .load-more').fadeOut();
-//                     }
-//
-//
-//                 } else {
-//                     console.log(res);
-//                 }
-//             }
-//         }).fail(function (xhr, textStatus, e) {
-//             console.log(xhr.responseText);
-//         });
-//         return false;
-//     });
+
 // }
 
 // document.addEventListener('wpcf7mailsent', function (event) {
@@ -794,6 +759,7 @@ function clickByCatsNewsArticles() {
 
         });
 }
+
 //----------------------------------
 //   Partners carousel
 //---------------------------------------
@@ -823,6 +789,112 @@ function homePartnersCarousel() {
         });
     }
 }
+
+
+//----------------------------------
+//   Load more news
+//---------------------------------------
+
+
+function loadMoreNews() {
+    "use strict";
+    jQuery(document).on('click', '.news-articles-page .load-more', function (e) {
+        e.preventDefault();
+        var thisClick = jQuery(this);
+        thisClick.addClass('load');
+        var $page = jQuery(this).attr('data-page');
+        var data = {
+            action: 'be_ajax_news_articles_load',
+            page: $page,
+            cat: jQuery('.news-articles__cats-item.active').attr('data-id')
+        };
+
+
+        jQuery(this).attr('data-page', ++$page);
+
+        jQuery.post(myajax.url, data, function (res) {
+            if (res.success) {
+                if (res.data != '') {
+
+                    thisClick.removeClass('load');
+
+                    jQuery('.news-articles__product-list')
+                        .append(res.data.data);
+
+                    var countCurrentItem = jQuery('.news-articles__product-list li').length;
+                    var ajaxCount = res.data.count.publish;
+
+                    if (countCurrentItem == ajaxCount || countCurrentItem > ajaxCount) {
+                        jQuery('.news-articles-page .load-more').fadeOut();
+                    }
+
+
+                } else {
+                    console.log(res);
+                }
+            }
+        }).fail(function (xhr, textStatus, e) {
+            console.log(xhr.responseText);
+        });
+        return false;
+    });
+
+}
+//---------------------------------------
+//   Switch content news articles
+//---------------------------------------
+
+function switchContentNewsArticles() {
+    "use strict";
+
+    jQuery(document).on('click', '.news-articles__cats-item', function (e) {
+        e.preventDefault();
+        var thisElement = jQuery(this);
+        jQuery('.news-articles__cats-item').removeClass('active');
+        thisElement.addClass('active');
+
+        thisElement.addClass('load');
+        // add preloader in content
+        jQuery('.news-articles__product-list').html('<div class="preloader w-100  d-flex  mb-5  justify-content-center"><img src="/wp-content/themes/asmart/assets/images/loading.gif" /> </div>');
+
+
+        // reset data-page for load more button
+        jQuery('.load-more').attr('data-page', '2').show();
+
+        var dataId = thisElement.attr('data-id');
+        var data = {
+            action: 'be_ajax_news_articles_load',
+            cat: dataId
+        };
+        jQuery.post(myajax.url, data, function (res) {
+            if (res.success) {
+                if (res.data != '') {
+
+                    thisElement.removeClass('load');
+
+                    jQuery('.preloader').remove();
+
+                    jQuery('.news-articles__product-list')
+                        .append(res.data.data);
+
+                    var countCurrentItem = jQuery('.news-articles__product-list li').length;
+                    var ajaxCount = res.data.count.publish;
+
+                    if (countCurrentItem == ajaxCount || countCurrentItem > ajaxCount) {
+                        jQuery('.news-articles-page .load-more').fadeOut();
+                    }
+
+
+                } else {
+                    console.log(res);
+                }
+            }
+        }).fail(function (xhr, textStatus, e) {
+            console.log(xhr.responseText);
+        });
+    });
+}
+
 
 
 

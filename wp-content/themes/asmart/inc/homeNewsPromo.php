@@ -51,6 +51,7 @@ $categories = get_categories();
                                     'post_type' => 'post',
                                     'orderby' => 'date',
                                     'order' => 'DESC',
+                                    'cat' => $value->term_id,
                                     'status' => 'publish'
                                 ];
                                 $the_query = new WP_Query($arg);

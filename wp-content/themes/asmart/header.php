@@ -17,11 +17,13 @@
           type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
+
     <script type='text/javascript'>
         /* <![CDATA[ */
         var myajax = {"url": "<?=admin_url('admin-ajax.php'); ?>"};
         /* ]]> */
     </script>
+
     <!--    <script type="application/ld+json">-->
     <!--        {-->
     <!--            "@context": "http://schema.org",-->
