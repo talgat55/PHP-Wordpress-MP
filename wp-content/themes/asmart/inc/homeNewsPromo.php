@@ -58,7 +58,7 @@ $categories = get_categories();
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
                                     $post_id = $the_query->post->ID;
-
+                                    $anons = get_field('anons',$post_id );
                                     ?>
                                     <li class="home-news-articles__item-carousel">
                                         <div class="home-news-articles__item_wrapper">
@@ -72,7 +72,7 @@ $categories = get_categories();
                                                     <?php echo get_the_title($post_id); ?>
                                                 </h3>
                                                 <div class="home-news-articles__text-carousel">
-                                                    <?php echo mb_strimwidth(get_the_content($post_id), 0, 150, "..."); ?>
+                                                    <?php echo mb_strimwidth(strip_tags($anons), 0, 150, "..."); ?>
                                                 </div>
                                                 <a class="home-news-articles__link"
                                                    href="<?php echo get_the_permalink($post_id); ?>">

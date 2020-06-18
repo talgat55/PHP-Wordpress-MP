@@ -713,12 +713,12 @@ function popularCarousel() {
 }
 
 //----------------------------------
-//   News Articles carousel
+//   News Articles carousel  and carousel in detail news articles
 //---------------------------------------
 
 function newsArticlesCarousel() {
     "use strict";
-    var carouselClass = jQuery('.home-news-articles__carousel');
+    var carouselClass = jQuery('.home-news-articles__carousel, .single-page-news_related-list');
 
     if (carouselClass.length) {
         carouselClass.slick({

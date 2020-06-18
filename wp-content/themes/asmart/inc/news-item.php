@@ -5,6 +5,7 @@
  * Date: 18.06.20
  * Time: 15:46
  */
+$anons = get_field('anons',get_the_ID() );
 ?>
 <li class="news-articles__item col-12 col-lg-3">
     <div class="news-articles__item_wrapper">
@@ -22,7 +23,7 @@
                 </a>
             </h3>
             <div class="news-articles____text">
-                <?php echo mb_strimwidth(strip_tags(get_the_content(get_the_ID())), 0, 150, "..."); ?>
+                <?php echo mb_strimwidth(strip_tags($anons), 0, 150, "..."); ?>
             </div>
             <a class="news-articles____link"
                href="<?php echo get_the_permalink(get_the_ID()); ?>">

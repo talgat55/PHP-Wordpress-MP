@@ -628,17 +628,34 @@ $gray_color: #2a2d2f
   .home-news-articles__cats-row
     padding: 0
 
+.single-news__bottom-block
+  margin-bottom: 59px
+.single-page-news_related-list
+  width: 100%
+
+
+  .news-articles__item
+    min-width: 285px
+
+  .slick-track
+    margin-left: 0
+
+.single-page-news_related-list,
 .news-articles__product-list
   padding: 0
   margin: 0 -5px
+
   li
     list-style: none
+
     &.news-articles__item
       padding: 0 5px 10px 5px
+
     .news-articles__image
       img
         max-width: 100%
         width: 100%
+
     .news-articles__item-content
       padding: 13px 8px 16px 8px
       border: 1px solid #ECF5FA
@@ -651,10 +668,12 @@ $gray_color: #2a2d2f
         line-height: 18px
         color: #424242
         margin: 0 0 5px
+
         a
           text-decoration: none
           color: #424242
           transition: all .3s
+
           &:hover
             text-decoration: none
             color: $theme_color
@@ -676,20 +695,40 @@ $gray_color: #2a2d2f
 
 .news-articles-page
   .load-more__row
-    margin:  15px 0 69px
+    margin: 15px 0 69px
 
+//
+// Single news and articles
+//
+.single-page-news
+  .single-page-news_content
+    margin-top: 35px
+
+    *
+      font-weight: normal
+      font-size: 15px
+      line-height: 22px
+      color: #424242
+
+  .title-third
+    font-weight: bold
+    font-size: 35px
+    line-height: 42px
+    color: #424242
+    margin: 30px 0 22px
 
 
 .load-more
   &.load
     position: relative
+
     &:before
       content: ""
       display: block
       width: 12px
       height: 12px
       background: url(../images/loading-small.gif)
-      background-repeat: no-repeat!important
+      background-repeat: no-repeat !important
       position: absolute
       top: 15px
       right: -29px
