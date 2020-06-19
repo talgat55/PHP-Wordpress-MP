@@ -17,12 +17,14 @@ get_header();
         <?php get_template_part('inc/breadsrumb'); ?>
         <div class="container">
             <div class="row ">
-                <?php while (have_posts()) :
-                    the_post(); ?>
-                    <div class="single-page-news_content">
+                <div class="col-12">
+                    <?php while (have_posts()) :
+                        the_post(); ?>
+                        <div class="single-page-news_content">
                             <?php the_content(); ?>
-                    </div>
-                <?php endwhile; ?>
+                        </div>
+                    <?php endwhile; ?>
+
                 <?php
                 $args = array(
                     'post__not_in' => array($post->ID),
@@ -51,6 +53,7 @@ get_header();
                     <?php
                 }
                 wp_reset_query(); ?>
+                </div>
             </div>
         </div>
 
