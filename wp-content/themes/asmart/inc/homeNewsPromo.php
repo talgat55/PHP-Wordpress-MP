@@ -58,18 +58,22 @@ $categories = get_categories();
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
                                     $post_id = $the_query->post->ID;
-                                    $anons = get_field('anons',$post_id );
+                                    $anons = get_field('anons', $post_id);
                                     ?>
                                     <li class="home-news-articles__item-carousel">
                                         <div class="home-news-articles__item_wrapper">
                                             <div class="home-news-articles__image-carousel">
-                                                <img
-                                                        src="<?= wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "home-news-articles")[0]; ?>"
-                                                />
+                                                <a href="<?php echo get_the_permalink($post_id); ?>">
+                                                    <img
+                                                            src="<?= wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "home-news-articles")[0]; ?>"
+                                                    />
+                                                </a>
                                             </div>
                                             <div class="home-news-articles__item-content">
                                                 <h3 class="home-news-articles__title-carousel">
-                                                    <?php echo get_the_title($post_id); ?>
+                                                    <a href="<?php echo get_the_permalink($post_id); ?>">
+                                                        <?php echo get_the_title($post_id); ?>
+                                                    </a>
                                                 </h3>
                                                 <div class="home-news-articles__text-carousel">
                                                     <?php echo mb_strimwidth(strip_tags($anons), 0, 150, "..."); ?>

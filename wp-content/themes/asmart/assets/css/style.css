@@ -33,6 +33,36 @@
   .link__alt:hover {
     color: #424242; }
 
+.link__large {
+  padding: 33px 60px;
+  display: inline-block;
+  max-width: 375px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 375px;
+  border: 1px solid #005BD7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 1px rgba(73, 73, 73, 0.2);
+          box-shadow: 0px 1px 1px rgba(73, 73, 73, 0.2);
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #005BD7;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .link__large svg {
+    margin-right: 6px; }
+  .link__large:hover {
+    text-decoration: none;
+    opacity: .5; }
+
 .main-title {
   font-weight: bold;
   font-size: 35px;
@@ -48,6 +78,9 @@
   line-height: 42px;
   color: #424242;
   margin: 0 0 38px; }
+
+.page-main {
+  padding: 48px 0 69px; }
 
 .breadcrumbs-section {
   background: #ECF5FA; }
@@ -452,6 +485,14 @@
     color: #424242;
     margin: 0 0 5px;
     min-height: 35px; }
+    .home-news-articles__title-carousel a {
+      color: #424242;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .home-news-articles__title-carousel a:hover {
+        color: #005BD7;
+        text-decoration: none; }
   .home-news-articles__text-carousel {
     font-weight: 500;
     font-size: 12px;
@@ -640,6 +681,24 @@
     top: 15px;
     right: -29px; }
 
+.page-about .about__content-page {
+  margin-bottom: 28px; }
+
+.page-about .about__features {
+  background: #ECF5FA;
+  padding: 49px 41px 0 41px;
+  margin-bottom: 33px; }
+
+.page-about .about__title-features {
+  margin: 11px 0 56px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #424242; }
+
+.page-about .about__item-features svg {
+  min-height: 60px; }
+
 .footer__second-row:before, .footer__first-row:before {
   content: "";
   display: block;
@@ -724,3 +783,13 @@
 
 .footer .bottom-copyright {
   white-space: nowrap; }
+
+@media (max-width: 992px) {
+  .link__large {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto; } }
+
+@media (max-width: 600px) {
+  .link__large {
+    padding: 15px; } }
