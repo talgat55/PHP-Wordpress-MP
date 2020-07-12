@@ -736,6 +736,19 @@
       position: relative;
       top: 11px; }
 
+.wrap .page-contacts {
+  padding: 41px 0 69px; }
+  .wrap .page-contacts__item-info {
+    margin-bottom: 18px; }
+    .wrap .page-contacts__item-info svg {
+      margin-right: 9px;
+      position: relative;
+      top: 4px; }
+
+#map {
+  width: 100%;
+  height: 350px; }
+
 .footer__second-row:before, .footer__first-row:before {
   content: "";
   display: block;
