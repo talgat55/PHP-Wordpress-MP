@@ -19,4 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+<div class="row">
+<div class="col row-sidebar-catalog">
+    <?php   woocommerce_product_category(); ?>
+</div>
+<div class="col row-list-catalog">
+
 <ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

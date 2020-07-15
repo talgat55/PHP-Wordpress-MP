@@ -48,7 +48,7 @@ function th_scripts()
 //    wp_enqueue_script('lightbox.min.js', get_theme_file_uri('/assets/js/lightbox.js'), array(), '', true);
 //
 //
-    if (is_page_template('page-contacts.php')  ) {
+    if (is_page_template('page-contacts.php')) {
         wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkewQZi7iY6eOtlXajXXHFWHECGYWqfMs&language=ru', array(), '1');
     }
 
@@ -104,146 +104,32 @@ function post_type_home_slider()
 
 
 /*
-*  Register Post Type  Awards
+*  Register Post Type  DOCS
 */
-//add_action('init', 'post_type_awards');
-//
-//function post_type_awards()
-//{
-//    $labels = array(
-//        'name' => 'Награды',
-//        'singular_name' => 'Награды',
-//        'all_items' => 'Награды',
-//        'menu_name' => 'Награды' // ссылка в меню в админке
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//        'query_var' => "awards",
-//        'supports' => array(
-//            'title',
-//            'thumbnail'
-//        )
-//    );
-//    register_post_type('awards', $args);
-//}
-//
+add_action('init', 'post_type_docs');
 
-/*
-*  Register Post Type  Review
-*/
-//add_action('init', 'post_type_review');
-//
-//function post_type_review()
-//{
-//    $labels = array(
-//        'name' => 'Отзывы',
-//        'singular_name' => 'Отзывы',
-//        'all_items' => 'Отзывы',
-//        'menu_name' => 'Отзывы' // ссылка в меню в админке
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//        'query_var' => "review",
-//        'supports' => array(
-//            'title',
-//            'editor',
-//            'thumbnail'
-//        )
-//    );
-//    register_post_type('review', $args);
-//}
+function post_type_docs()
+{
+    $labels = array(
+        'name' => 'Документы',
+        'singular_name' => 'Документы',
+        'all_items' => 'Документы',
+        'menu_name' => 'Документы' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "docs",
+        'supports' => array(
+            'title',
+            'editor'
+        )
+    );
+    register_post_type('docs', $args);
+}
 
-/*
-*  Register Post Type  Portfolio
-*/
-//add_action('init', 'post_type_portfolio');
-//
-//function post_type_portfolio()
-//{
-//    $labels = array(
-//        'name' => 'Наши работы',
-//        'singular_name' => 'Наши работы',
-//        'all_items' => 'Наши работы',
-//        'menu_name' => 'Наши работы' // ссылка в меню в админке
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//        'query_var' => "portfolio",
-//        'supports' => array(
-//            'title',
-//            'editor',
-//            'thumbnail'
-//        )
-//    );
-//    register_post_type('portfolio', $args);
-//}
-
-/*
-*  Register Post Type  Services
-*/
-//add_action('init', 'post_type_services');
-//
-//function post_type_services()
-//{
-//    $labels = array(
-//        'name' => 'Услуги',
-//        'singular_name' => 'Услуги',
-//        'all_items' => 'Услуги',
-//        'menu_name' => 'Услуги' // ссылка в меню в админке
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//        'query_var' => "services",
-//        'supports' => array(
-//            'title',
-//            'editor',
-//            'thumbnail'
-//        )
-//    );
-//    register_post_type('services', $args);
-//}
-//
-///*
-//*  Register Post Type  Clients
-//*/
-//add_action('init', 'post_type_clients');
-//
-//function post_type_clients()
-//{
-//    $labels = array(
-//        'name' => 'Клиенты',
-//        'singular_name' => 'Клиенты',
-//        'all_items' => 'Клиенты',
-//        'menu_name' => 'Клиенты' // ссылка в меню в админке
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//        'query_var' => "clients",
-//        'supports' => array(
-//            'title',
-//            'thumbnail'
-//        )
-//    );
-//    register_post_type('clients', $args);
-//}
-//
-//
-//
 
 /*
 *  Register Post Type Settings
@@ -325,7 +211,7 @@ function be_ajax_news_articles_load()
 {
     $count = wp_count_posts('post');
     ob_start();
-     newsItems($_POST['page'], $_POST['cat']);
+    newsItems($_POST['page'], $_POST['cat']);
     wp_reset_postdata();
     $data = ob_get_clean();
     $response = [
@@ -342,7 +228,8 @@ add_action('wp_ajax_nopriv_be_ajax_news_articles_load', 'be_ajax_news_articles_l
 /*
  * Load items for News ajax
  */
-function newsItems($page, $cat){
+function newsItems($page, $cat)
+{
     $arg = [
         'posts_per_page' => 8,
         'post_type' => 'post',
@@ -393,7 +280,6 @@ function post_type_partners()
 }
 
 
-
 /*
  * Breadcrumb
  */
@@ -437,6 +323,7 @@ function dimox_breadcrumbs()
     if (is_home() || is_front_page()) {
         if ($show_on_home) echo $wrap_before . $home_link . $wrap_after;
     } else {
+
         echo $wrap_before;
         if ($show_home_link) echo $home_link;
         if (is_category()) {
@@ -475,13 +362,25 @@ function dimox_breadcrumbs()
             if ($show_home_link && $show_current) echo $sep;
             if ($show_current) echo $before . get_the_time('Y') . $after;
         } elseif (is_single() && !is_attachment()) {
+
             if ($show_home_link) echo $sep;
             if (get_post_type() != 'post') {
-                $post_type = get_post_type_object(get_post_type());
-                $slug = $post_type->rewrite;
-                printf($link, $home_url . $slug['slug'] . '/', $post_type->labels->singular_name);
-                if ($show_current) echo $sep . $before . get_the_title() . $after;
+
+                if (get_post_type() == 'docs') {
+                    $post_type = get_post_type_object(get_post_type());
+                    $slug = $post_type->rewrite;
+                    printf($link, $home_url . 'documenti/', $post_type->labels->singular_name);
+                    if ($show_current) echo $sep . $before . get_the_title() . $after;
+                } else {
+
+                    $post_type = get_post_type_object(get_post_type());
+                    $slug = $post_type->rewrite;
+                    printf($link, $home_url . $slug['slug'] . '/', $post_type->labels->singular_name);
+                    if ($show_current) echo $sep . $before . get_the_title() . $after;
+                }
+
             } else {
+
                 $cat = get_the_category();
                 $cat = $cat[0];
                 $cats = get_category_parents($cat, TRUE, $sep);
@@ -498,6 +397,7 @@ function dimox_breadcrumbs()
             // custom post type
         } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
             $post_type = get_post_type_object(get_post_type());
+
             if (get_query_var('paged')) {
                 echo $sep . sprintf($link, get_post_type_archive_link($post_type->name), $post_type->label) . $sep . $before . sprintf($text['page'], get_query_var('paged')) . $after;
             } else {
@@ -516,8 +416,10 @@ function dimox_breadcrumbs()
             printf($link, get_permalink($parent), $parent->post_title);
             if ($show_current) echo $sep . $before . get_the_title() . $after;
         } elseif (is_page() && !$parent_id) {
+
             if ($show_current) echo $sep . $before . get_the_title() . $after;
         } elseif (is_page() && $parent_id) {
+
             if ($show_home_link) echo $sep;
             if ($parent_id != $frontpage_id) {
                 $breadcrumbs = array();
@@ -564,3 +466,54 @@ function dimox_breadcrumbs()
     }
 }
 
+/*
+ * Woo
+ */
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+
+/**
+ *  Woo cats
+ * @param array $args
+ */
+function woocommerce_product_category()
+{
+
+
+    $taxonomy =  'product_cat';
+    $terms = get_terms($taxonomy);
+    if ($terms) {
+        echo '<ul class="woocommerce-categories">';
+        foreach ($terms as $term) {
+            echo '<li class="woocommerce-product-category-page">';
+            echo '<div>';
+            echo '<a href="' . esc_url(get_term_link($term)) . '" class="' . $term->slug . '">';
+            echo $term->name;
+            echo '</a>';
+            echo '</div>';
+            $child = get_term_children($term->term_id, $taxonomy);
+            if ($child) {
+                echo '
+                    <svg  class="active" width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.50069 8.50592L0.532909 3.53814C0.410732 3.41596 0.214787 3.41596 0.0926096 3.53814C-0.0295678 3.66032 -0.0295678 3.85626 0.0926096 3.97844L5.28169 9.16752C5.40387 9.2897 5.59981 9.2897 5.72199 9.16752L10.9088 3.97844C10.9687 3.9185 11.001 3.83782 11.001 3.75944C11.001 3.68107 10.971 3.60038 10.9088 3.54045C10.7866 3.41827 10.5906 3.41827 10.4685 3.54045L5.50069 8.50592Z" fill="black"/>
+                    </svg>
+                ';
+                echo '<ul>';
+                foreach ($child as $childValue) {
+                    echo '<li>';
+                    $termChild = get_term_by( 'id', $childValue, $taxonomy );
+
+                    echo '<a href="' . esc_url(get_term_link($termChild)) . '" class="' . $termChild->slug . '">';
+                    echo $termChild->name;
+                    echo '</a>';
+                    echo '</li>';
+                }
+                echo '</ul>';
+            }
+            echo '</li>';
+        }
+        echo '</ul>';
+    }
+}
+//add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );

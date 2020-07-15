@@ -85,6 +85,9 @@
 .breadcrumbs-section {
   background: #ECF5FA; }
 
+.woocommerce-page .breadcrumbs-section {
+  background: transparent; }
+
 .breadcrumbs {
   display: -webkit-box;
   display: -webkit-flex;
@@ -431,6 +434,56 @@
   opacity: .5 !important;
   background: url("../images/arrow.png") !important; }
 
+.row-sidebar-catalog {
+  max-width: 320px; }
+
+.woocommerce-categories {
+  background: #ECF5FA;
+  padding: 28px 19px;
+  margin: 0; }
+  .woocommerce-categories li {
+    list-style: none;
+    margin-bottom: 22px;
+    position: relative; }
+    .woocommerce-categories li a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000; }
+    .woocommerce-categories li svg {
+      position: absolute;
+      right: 0;
+      top: 6px;
+      cursor: pointer;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .woocommerce-categories li svg.active {
+        -webkit-transform: rotateZ(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotateZ(180deg); }
+  .woocommerce-categories ul {
+    margin: 8px 0 0 0;
+    padding: 0; }
+    .woocommerce-categories ul li {
+      list-style: none;
+      margin-bottom: 8px; }
+      .woocommerce-categories ul li a {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        color: #424242; }
+  .woocommerce-categories a {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .woocommerce-categories a:hover {
+      text-decoration: none;
+      color: #005BD7; }
+  .woocommerce-categories .woocommerce-product-category-page:last-child {
+    margin-bottom: 0; }
+
 .home-service {
   background: #ECF5FA;
   padding: 66px 0 80px; }
@@ -735,6 +788,84 @@
       min-width: 23px;
       position: relative;
       top: 11px; }
+
+.wrap .page-contacts {
+  padding: 41px 0 69px; }
+  .wrap .page-contacts__item-info {
+    margin-bottom: 18px; }
+    .wrap .page-contacts__item-info svg {
+      margin-right: 9px;
+      position: relative;
+      top: 4px; }
+
+#map {
+  width: 100%;
+  height: 350px; }
+
+.page-docs {
+  margin: 40px 0; }
+
+.page-docs__items-list {
+  margin: 0 -11px;
+  padding: 0; }
+  .page-docs__items-list .page-docs__item {
+    list-style: none;
+    padding: 0 11px 26px; }
+    .page-docs__items-list .page-docs__item a {
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 30px;
+      color: #005BD7;
+      border: 1px solid #005BD7;
+      -webkit-box-shadow: 0px 1px 1px rgba(73, 73, 73, 0.2);
+              box-shadow: 0px 1px 1px rgba(73, 73, 73, 0.2);
+      border-radius: 10px;
+      padding: 10px 20px;
+      min-height: 97px;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .page-docs__items-list .page-docs__item a:hover {
+        text-decoration: none;
+        background-color: #005BD7;
+        border-color: #005BD7;
+        color: #fff; }
+
+.single-page-docs {
+  margin: 40px 0; }
+
+.single-page-docs__list-docs {
+  margin: 0;
+  padding: 0; }
+  .single-page-docs__list-docs li {
+    list-style: none;
+    margin-bottom: 20px; }
+    .single-page-docs__list-docs li a {
+      display: block;
+      font-size: 20px;
+      line-height: 22px;
+      -webkit-text-decoration-line: underline;
+              text-decoration-line: underline;
+      color: #005BD7;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .single-page-docs__list-docs li a:hover {
+        text-decoration: none;
+        color: #333; }
 
 .footer__second-row:before, .footer__first-row:before {
   content: "";

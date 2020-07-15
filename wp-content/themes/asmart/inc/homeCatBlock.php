@@ -34,9 +34,12 @@ $classArray = ['one', 'two', 'tree', 'four', 'five'];
                 <?php foreach ($all_categories as $key => $prod_cat) :
                     $cat_thumb_id = get_woocommerce_term_meta($prod_cat->term_id, 'thumbnail_id', true);
                     $shop_catalog_img = wp_get_attachment_image_src($cat_thumb_id, 'shop_catalog');
-                    $term_link = get_term_link($prod_cat, 'product_cat'); ?>
-                    <div class="products-cat__item <?php echo $classArray[$key]; ?>">
-                        <a href="<?php echo $term_link; ?>">
+                    $term_link = get_term_link($prod_cat, 'product_cat');
+                    $display = get_field('show_on_home_page', $prod_cat);
+
+                    if ($display == 'yes') : ?>
+                        <div class="products-cat__item <?php echo $classArray[$key]; ?>">
+                            <a href="<?php echo $term_link; ?>">
                                 <img class="lazy"
                                      src="<?php echo get_theme_file_uri('/assets/images/transpaernt.png'); ?>"
                                      data-src="<?php echo $shop_catalog_img[0]; ?>"
@@ -44,9 +47,10 @@ $classArray = ['one', 'two', 'tree', 'four', 'five'];
                                 <h3 class="products-cat__title">
                                     <?php echo $prod_cat->name; ?>
                                 </h3>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
+                            </a>
+                        </div>
+                    <?php endif;
+                endforeach; ?>
             </div>
             <div class="w-100 d-flex justify-content-center">
                 <a href="/" class="link">

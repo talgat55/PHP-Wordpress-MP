@@ -14,6 +14,7 @@ jQuery(document).ready(function () {
     homePartnersCarousel();
     loadMoreNews();
     switchContentNewsArticles();
+    acccordionCats();
     // ajaxLoadData();
     // mobileMenu();
     // phoneMask();
@@ -840,6 +841,19 @@ function loadMoreNews() {
     });
 
 }
+
+//---------------------------------------
+//   Cats toggle
+//---------------------------------------
+function acccordionCats() {
+    "use strict";
+    jQuery('.woocommerce-product-category-page svg').click(function () {
+        jQuery(this).parent().find('ul').stop().slideToggle();
+        jQuery(this).toggleClass("active");
+        jQuery(this).parent().toggleClass("active");
+    });
+}
+
 //---------------------------------------
 //   Switch content news articles
 //---------------------------------------
