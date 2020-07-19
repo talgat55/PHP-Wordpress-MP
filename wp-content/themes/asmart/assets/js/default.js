@@ -35,11 +35,11 @@ jQuery(document).ready(function () {
     //
     // jQuery('.lazy').lazy();
     //
-    // $('.menu-icon-toggle').on('click', function(e) {
-    //     $('body').toggleClass('open');
-    //
-    //     e.preventDefault();
-    // });
+    jQuery('.menu-icon-toggle').on('click', function(e) {
+        jQuery('body').toggleClass('open');
+
+        e.preventDefault();
+    });
 
 
     //
@@ -249,8 +249,6 @@ function lasyLoad() {
 //     });
 //
 // }
-
-
 
 
 //----------------------------------
@@ -625,7 +623,6 @@ function lasyLoad() {
 //     });
 
 
-
 // }
 
 // document.addEventListener('wpcf7mailsent', function (event) {
@@ -660,7 +657,7 @@ function homeSlider() {
             autoplaySpeed: 4000,
             responsive: [
                 {
-                    breakpoint: 690,
+                    breakpoint: 768,
                     settings: {
                         arrows: false,
                         dots: true,
@@ -682,8 +679,6 @@ function homeSlider() {
 }
 
 
-
-
 //----------------------------------
 //   Popular slider
 //---------------------------------------
@@ -701,8 +696,25 @@ function popularCarousel() {
             autoplaySpeed: 4000,
             responsive: [
                 {
-                    breakpoint: 690,
+                    breakpoint: 1024,
                     settings: {
+                        slidesToShow: 3,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
                         arrows: false,
                         dots: true,
                     }
@@ -731,8 +743,25 @@ function newsArticlesCarousel() {
             dots: false,
             responsive: [
                 {
-                    breakpoint: 690,
+                    breakpoint: 1024,
                     settings: {
+                        slidesToShow: 3,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
                         arrows: false,
                         dots: true,
                     }
@@ -750,15 +779,15 @@ function newsArticlesCarousel() {
 function clickByCatsNewsArticles() {
     "use strict";
 
-        jQuery(document).on('click', '.home-news-articles__cats a', function (e) {
-            e.preventDefault();
-            var thisElement = jQuery(this);
-            var thisId = thisElement.attr("data-id");
-            jQuery('.home-news-articles__cats a , .home-news-articles__content').removeClass('active');
-            thisElement.addClass('active');
-            jQuery('.home-news-articles__content.'+thisId).addClass('active');
+    jQuery(document).on('click', '.home-news-articles__cats a', function (e) {
+        e.preventDefault();
+        var thisElement = jQuery(this);
+        var thisId = thisElement.attr("data-id");
+        jQuery('.home-news-articles__cats a , .home-news-articles__content').removeClass('active');
+        thisElement.addClass('active');
+        jQuery('.home-news-articles__content.' + thisId).addClass('active');
 
-        });
+    });
 }
 
 //----------------------------------
@@ -779,8 +808,25 @@ function homePartnersCarousel() {
             dots: false,
             responsive: [
                 {
-                    breakpoint: 690,
+                    breakpoint: 1024,
                     settings: {
+                        slidesToShow: 3,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
                         arrows: false,
                         dots: true,
                     }

@@ -48,11 +48,11 @@
             </div>
             <div class="footer__second-row col-lg-9 col-sm-12  position-relative d-flex align-items-center">
               <div class="d-lg-flex  justify-content-between   w-100">
-                  <div class="col-12 col-md-5">
+                  <div class="col-12  col-lg-5 col-md-12">
                           <?php wp_nav_menu('container=div&menu_id=footer-main&menu_class=footer-main-container clearfix&theme_location=top_menu'); ?>
                   </div>
-                  <div class="col-12 col-md-7 align-items-end  d-flex">
-                      <div class="d-flex   justify-content-between w-100 align-items-end">
+                  <div class="col-12 col-lg-7 col-md-12  align-items-end  d-flex">
+                      <div class="d-md-flex   justify-content-lg-between w-100 align-items-end">
                           <div class="footer__other-links   ">
                               <a href="/policy" class="link-to-policy">
                                   Политика конфиденциальности
@@ -60,7 +60,7 @@
                               <a target="_blank" class="bottom-copyright" title="Перейти на сайт разработчика"
                                  href="https://asmart-group.ru/">Cайт создан в IT-company <span>ASMART</span></a>
                           </div>
-                          <div  >
+                          <div  class="footer__soc-link-block">
                               <div class="text-right   soc__title">Социальные сети:</div>
                               <ul class="d-flex  soc-links justify-content-end">
                                   <li>

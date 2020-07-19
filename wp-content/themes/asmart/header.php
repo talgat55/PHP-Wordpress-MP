@@ -51,7 +51,7 @@ $phone_number_two = get_field('phone_header_two', 'option');
         <div class="header__top">
             <div class="container">
                 <div class="row  justify-content-between">
-                   <div class="col-12 col-lg-6">
+                   <div class="col-6 col-lg-6">
                        <a class="logo" href="<?php echo home_url(); ?>">
                            <svg width="236" height="38" viewBox="0 0 236 38" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -67,7 +67,7 @@ $phone_number_two = get_field('phone_header_two', 'option');
                            </svg>
                        </a>
                    </div>
-                    <div class="col-12 col-lg-6  d-flex align-items-center  justify-content-between">
+                    <div class="col-6 col-lg-6  d-flex align-items-center  justify-content-between">
                         <div class="header__phone-block">
                            <div class="d-flex  align-items-center">
                                <div class="d-flex align-items-center header__phone-item">
@@ -91,7 +91,7 @@ $phone_number_two = get_field('phone_header_two', 'option');
                                 Бесплатный звонок из любой точки России
                             </div>
                         </div>
-                        <div class="d-flex align-items-center">
+                        <div class="header__search-cart-block d-flex align-items-center">
                             <div class="header__search-block">
                                 <a href="/search">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@ $phone_number_two = get_field('phone_header_two', 'option');
                             </div>
                         </div>
                     </div>
-                    <!--                <a href="#" class="menu-icon-toggle"><span></span></a>-->
+                                    <a href="#" class="menu-icon-toggle"><span></span></a>
                 </div>
             </div>
         </div>
@@ -124,19 +124,29 @@ $phone_number_two = get_field('phone_header_two', 'option');
         </div>
     </header>
     <div class="header_fixed"></div>
-    <?php
-    /*
+
            <div class="mobile-menu d-flex w-100   justify-content-center">
             <div>
                 <?php wp_nav_menu('container=div&menu_id=menu-mobile&menu_class=mobile-main-container clearfix&theme_location=top_menu'); ?>
+                <div class="d-flex phone-numbers__mobile ">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.7162 10.5022C13.7366 10.5022 12.7747 10.349 11.8633 10.0478C11.4167 9.89542 10.8676 10.0352 10.595 10.3151L8.796 11.6732C6.70963 10.5595 5.42446 9.27475 4.32596 7.20404L5.64408 5.45188C5.98654 5.10988 6.10938 4.61029 5.96221 4.14154C5.65971 3.22529 5.50604 2.26392 5.50604 1.28392C5.50608 0.575958 4.93013 0 4.22221 0H1.28387C0.575958 0 0 0.575958 0 1.28387C0 9.39846 6.60158 16 14.7162 16C15.4241 16 16 15.424 16 14.7161V11.786C16 11.0781 15.424 10.5022 14.7162 10.5022Z" fill="#005BD7"/>
+                    </svg>
+                    <a href="tel:<?php echo $phone_number_one; ?>">
+                        <?php echo $phone_number_one; ?>
+                    </a>
+                </div>
+                <div class="d-flex phone-numbers__mobile">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.7162 10.5022C13.7366 10.5022 12.7747 10.349 11.8633 10.0478C11.4167 9.89542 10.8676 10.0352 10.595 10.3151L8.796 11.6732C6.70963 10.5595 5.42446 9.27475 4.32596 7.20404L5.64408 5.45188C5.98654 5.10988 6.10938 4.61029 5.96221 4.14154C5.65971 3.22529 5.50604 2.26392 5.50604 1.28392C5.50608 0.575958 4.93013 0 4.22221 0H1.28387C0.575958 0 0 0.575958 0 1.28387C0 9.39846 6.60158 16 14.7162 16C15.4241 16 16 15.424 16 14.7161V11.786C16 11.0781 15.424 10.5022 14.7162 10.5022Z" fill="#005BD7"/>
+                    </svg>
+                    <a href="tel:<?php echo $phone_number_two; ?>">
+                        <?php echo $phone_number_two; ?>
+                    </a>
+                </div>
 
-                <a href="tel:<?php echo strip_tags($phone_number); ?>">
-                    <img src="<?php echo get_theme_file_uri('/assets/images/phone.png'); ?>"
-                         alt="Иконка"/> <?php echo $phone_number; ?>
-                </a>
             </div>
         </div>
-      */
-    ?>
+
 
 

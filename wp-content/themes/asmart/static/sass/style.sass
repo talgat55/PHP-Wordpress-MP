@@ -62,7 +62,8 @@ $gray_color: #2a2d2f
   font-size: 20px
   line-height: 30px
   color: #005BD7
-  transition:  all .3s
+  transition: all .3s
+
   svg
     margin-right: 6px
 
@@ -132,6 +133,132 @@ $gray_color: #2a2d2f
 //
 //  Header
 //
+.mobile-menu
+  display: none!important
+  position: absolute
+  z-index: 99
+  background: #fff
+  top: 79px
+  left: 0
+  height: 100%
+  .open &
+    display: flex!important
+  .phone-numbers__mobile
+    a
+      text-decoration: none
+      color: #414141
+    svg
+      margin-right: 5px
+
+
+
+  #menu-mobile
+    margin: 30px 0 30px
+    padding: 0
+    li
+      list-style: none
+      a
+        text-decoration: none
+        color: #414141
+
+
+
+
+.menu-icon-toggle
+  width: 30px
+  height: 30px
+  position: absolute
+  z-index: 9999
+  cursor: pointer
+  display: none
+  right: 20px
+  top: 25px
+
+  span
+    display: block
+    width: 100%
+    height: 2px
+    position: absolute
+    top: 50%
+    background-color: #424242
+    transform: translate(0, -50%)
+    transition: opacity 0.3s 0.3s
+
+    .home:not(.open) &
+      background-color: #424242
+
+
+  &::before,
+  &::after
+    content: ''
+    display: block
+    width: 100%
+    height: 2px
+    position: absolute
+    background-color: #424242
+    transition: transform 0.3s, top 0.3s 0.3s, bottom 0.3s 0.3s
+
+  &::before
+    top: 6px
+
+  &::after
+    bottom: 6px
+
+  .open &
+    span
+      opacity: 0
+      transition: opacity 0.3s
+
+    &::before,
+    &::after
+      background-color: $danube
+
+    &::before
+      top: calc(50% - 1px)
+      transform: rotate(45deg)
+
+    &::after
+      bottom: calc(50% - 1px)
+      transform: rotate(-45deg)
+
+    &::before,
+    &::after
+      transition: top 0.3s, bottom 0.3s, transform 0.3s 0.3s
+
+  .open &
+    visibility: visible
+    transition: background-position 0.5s, transform 0.5s 0.5s
+
+  &.top
+    transform: rotate(-45deg) translateY(-150%)
+    background: linear-gradient(to top, $danube 50%, $white 50%)
+    background-size: 100% 200%
+    background-position: -100% 100%
+
+    .open &
+      transform: rotate(-45deg) translateY(-49%)
+      background-position: 0 0
+
+
+  &.middle
+    transform: rotate(-45deg) translateY(50%) scaleY(0)
+    background: $white
+
+    .open &
+      transform: rotate(-45deg) translateY(50%) scaleY(1)
+
+
+  &.bottom
+    transform: rotate(-45deg) translateY(250%)
+    background: linear-gradient(to bottom, $white 50%, $danube 50%)
+    background-size: 100% 200%
+    background-position: 0 -100%
+
+    .open &
+      transform: rotate(-45deg) translateY(149%)
+      background-position: 0 0
+
+
 .header
   &__top
     padding: 21px 0
@@ -274,7 +401,9 @@ $gray_color: #2a2d2f
 
       &.right
         right: -30px
-
+.home-partners,
+.home-popular-items,
+.home-slider
   .slick-dots
     bottom: 15px
 
@@ -391,6 +520,15 @@ $gray_color: #2a2d2f
 .home-popular-items
   margin: 60px 0 89px 0
 
+  .slick-dots
+    bottom: -30px
+
+  .home-popular__first-block
+    margin: 0 0 38px
+
+    .main-title
+      margin-bottom: 0
+
   .popular-product__list
     margin: 0
     padding: 0
@@ -427,7 +565,6 @@ $gray_color: #2a2d2f
         img
           margin: 0 auto
 
-.home-partners,
 .home-popular-items,
 .home-news-articles
   .slick-arrow
@@ -688,7 +825,8 @@ $gray_color: #2a2d2f
 
   .home-partners__item
     height: 57px
-
+  .slick-dots
+    bottom: -30px
 //
 // News Articles page
 //
@@ -900,6 +1038,7 @@ $gray_color: #2a2d2f
 
     &__item-info
       margin-bottom: 18px
+
       svg
         margin-right: 9px
         position: relative
@@ -909,7 +1048,6 @@ $gray_color: #2a2d2f
 #map
   width: 100%
   height: 350px
-
 
 
 //
@@ -1101,7 +1239,35 @@ $gray_color: #2a2d2f
   .bottom-copyright
     white-space: nowrap
 
-@media  (max-width: 992px)
+
+@media (max-width: 1200px)
+  .header__phone-item
+    margin-right: 30px
+
+    a
+      font-size: 14px
+  .header__text-phone
+    margin-top: 10px
+  .home__about .home__text-about
+    margin: 0
+  .home__link-about,
+  .home__about .link
+    margin-right: 0!important
+    margin-top: 20px!important
+  .footer-logo svg
+    max-width: 200px
+
+@media (max-width: 1120px)
+  .header__bottom
+    .main-main-container
+      li
+        a
+          margin: 0 20px
+
+
+@media (max-width: 992px)
+  .menu-icon-toggle
+    display: inline-block!important
   .link__large
     min-width: 100%
     max-width: 100%
@@ -1109,6 +1275,128 @@ $gray_color: #2a2d2f
   .page-service .service__feature
     column-count: 1
 
-@media  (max-width: 600px)
+  .home-service__image,
+  .header__phone-block,
+  .header__bottom
+    display: none !important
+
+  .header__search-cart-block
+    margin: 0 0 0 auto
+
+
+  .home-slider__title
+    font-size: 32px
+    line-height: 1.5
+
+  .home-slider__text
+    font-size: 14px
+
+  .products-cat-list
+    display: flex
+    flex-wrap: wrap
+    grid-template-columns: auto
+    grid-template-rows: auto
+    gap: inherit
+    grid-template-areas: none
+
+    > .products-cat__item
+      width: 50%
+
+    a img
+      min-height: auto
+      max-width: 100%
+
+  .home__about .home__first-about
+    padding: 30px 15px 40px 15px
+    .main-title
+      margin-bottom: 20px
+
+  .home__about
+    margin: 40px 0 0
+    .home__second-about
+      padding-left: 0!important
+      padding-top: 40px
+    .home__title-box
+      margin-bottom: 40px!important
+  .footer__first-row:before
+    right: -50%
+  .footer__second-row:before
+    left: -50%
+
+  .footer__first-row
+    display: flex
+    flex-wrap: wrap
+  .footer .footer-logo
+    width: 50%
+
+  .footer .footer-main-container
+    margin: 0
+  .footer__soc-link-block
+    padding-left: 87px
+
+@media (max-width: 768px)
+  .home-slider_slider
+    .home-slider_slider__item
+      height: 340px
+
+  .home-slider__arrows
+    display: none !important
+  .products-cat-list
+    > .products-cat__item
+      width: 100%
+  .home-news-articles
+    .main-title
+      margin-bottom: 0
+  .home-news-articles__cats
+    margin-bottom: 30px
+
+  .home-partners
+    margin: 30px 0 60px
+  .footer__other-links
+    margin-top: 7px
+
+  .footer__soc-link-block
+    padding-left: 0
+    margin: 7px auto 0 0
+    display: inline-block
+  header
+    .logo
+      svg
+        width: 100%
+
+    .header__search-cart-block
+      margin-right: 35px
+
+@media (max-width: 600px)
   .link__large
     padding: 15px
+
+  .home-slider__title
+    font-size: 25px
+
+  .main-title
+    font-size: 25px
+    line-height: 1.5
+    margin: 0 0 25px
+
+  .row
+    margin: 0
+
+  .home__product-list-cat
+    margin: 40px 0 30px
+
+
+  .home-service
+    padding: 40px 0 40px
+
+  .home-news-articles
+    margin: 40px 0 0 0
+  .footer__second-row .col-12,
+  .home-news-articles__wrapper,
+  .home-service__first
+    padding: 0
+
+  .home-news-articles .main-title,
+  .home-news-articles__cats
+    margin-left: -15px
+    margin-right: -15px

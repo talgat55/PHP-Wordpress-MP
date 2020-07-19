@@ -12,11 +12,11 @@ $categories = get_categories();
 <section class="home-news-articles">
     <div class="container">
         <div class="row">
-            <div class="col-12  d-flex w-100  align-items-start  justify-content-between">
+            <div class="col-12 d-lg-flex w-100  align-items-start  justify-content-between">
                 <h2 class="main-title">
                     Новости и статьи
                 </h2>
-                <ul class="home-news-articles__cats  d-lg-flex">
+                <ul class="home-news-articles__cats  d-flex">
                     <?php
                     $i = 0;
                     $activeTermId = '';

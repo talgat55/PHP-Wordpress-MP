@@ -20,13 +20,14 @@ $products = $query->get_products();
 <section class="home-popular-items">
     <div class="container">
         <div class="row">
-            <div class="d-lg-flex  justify-content-between  align-items-center w-100">
-                <h2 class="main-title">
-                    Популярные товары
-                </h2>
-                <a href="#" class="link__alt">
-                    ВСЕ ТОВАРЫ
-                </a>
+            <div class="home-popular__first-block d-lg-flex  justify-content-between  align-items-center w-100">
+
+                    <h2 class="main-title">
+                        Популярные товары
+                    </h2>
+                    <a href="#" class="link__alt">
+                        ВСЕ ТОВАРЫ
+                    </a>
             </div>
             <ul class="popular-product__list">
                 <?php foreach ($products as $product):  $post_thumbnail_id = $product->get_image_id(); ?>
