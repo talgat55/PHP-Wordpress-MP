@@ -25,4 +25,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 <div class="col row-list-catalog">
     <?php get_search_form(  ); ?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<ul class="products row">

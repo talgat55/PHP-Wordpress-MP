@@ -481,7 +481,7 @@ function woocommerce_product_category()
 {
 
 
-    $taxonomy =  'product_cat';
+    $taxonomy = 'product_cat';
     $terms = get_terms($taxonomy);
     if ($terms) {
         echo '<ul class="woocommerce-categories">';
@@ -502,7 +502,7 @@ function woocommerce_product_category()
                 echo '<ul>';
                 foreach ($child as $childValue) {
                     echo '<li>';
-                    $termChild = get_term_by( 'id', $childValue, $taxonomy );
+                    $termChild = get_term_by('id', $childValue, $taxonomy);
 
                     echo '<a href="' . esc_url(get_term_link($termChild)) . '" class="' . $termChild->slug . '">';
                     echo $termChild->name;
@@ -516,4 +516,21 @@ function woocommerce_product_category()
         echo '</ul>';
     }
 }
+
 //add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );
+
+
+/**
+ * Change number or products per row to 3
+ */
+add_filter('loop_shop_columns', 'loop_columns', 999);
+if (!function_exists('loop_columns')) {
+    function loop_columns()
+    {
+        return 3; // 3 products per row
+    }
+}
+
+
+
+remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
