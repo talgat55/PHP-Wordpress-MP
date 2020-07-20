@@ -34,7 +34,11 @@ $classArray = ['one', 'two', 'tree', 'four', 'five'];
                 <?php foreach ($all_categories as $key => $prod_cat) :
                     $cat_thumb_id = get_woocommerce_term_meta($prod_cat->term_id, 'thumbnail_id', true);
                     $shop_catalog_img = wp_get_attachment_image_src($cat_thumb_id, 'shop_catalog');
-                    $term_link = get_term_link($prod_cat, 'product_cat'); ?>
+                    $term_link = get_term_link($prod_cat, 'product_cat');
+
+                    $showOnHomePage = get_field('show_on_home_page', $prod_cat);
+                    ?>
+                    <?php if ($showOnHomePage == 'yes'): ?>
                     <div class="products-cat__item <?php echo $classArray[$key]; ?>">
                         <a href="<?php echo $term_link; ?>">
                             <img class="lazy"
@@ -46,6 +50,7 @@ $classArray = ['one', 'two', 'tree', 'four', 'five'];
                             </h3>
                         </a>
                     </div>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </div>
             <div class="w-100 d-flex justify-content-center">
