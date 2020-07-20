@@ -24,5 +24,5 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php   woocommerce_product_category(); ?>
 </div>
 <div class="col row-list-catalog">
-
+    <?php get_search_form(  ); ?>
 <ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

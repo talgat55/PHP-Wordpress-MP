@@ -134,34 +134,36 @@ $gray_color: #2a2d2f
 //  Header
 //
 .mobile-menu
-  display: none!important
+  display: none !important
   position: absolute
   z-index: 99
   background: #fff
   top: 79px
   left: 0
   height: 100%
+
   .open &
-    display: flex!important
+    display: flex !important
+
   .phone-numbers__mobile
     a
       text-decoration: none
       color: #414141
+
     svg
       margin-right: 5px
-
 
 
   #menu-mobile
     margin: 30px 0 30px
     padding: 0
+
     li
       list-style: none
+
       a
         text-decoration: none
         color: #414141
-
-
 
 
 .menu-icon-toggle
@@ -401,6 +403,7 @@ $gray_color: #2a2d2f
 
       &.right
         right: -30px
+
 .home-partners,
 .home-popular-items,
 .home-slider
@@ -825,6 +828,7 @@ $gray_color: #2a2d2f
 
   .home-partners__item
     height: 57px
+
   .slick-dots
     bottom: -30px
 //
@@ -1133,6 +1137,67 @@ $gray_color: #2a2d2f
         text-decoration: none
         color: #333
 
+//
+//  Search form
+//
+#searchform
+  margin-bottom: 24px
+  display: flex
+  justify-content: space-between
+  position: relative
+  &:before
+    content: ""
+    display: block
+    background: url(../images/search-icon.png)
+    background-repeat: no-repeat!important
+    width: 16px
+    height: 16px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 13px
+
+  #s
+    padding: 14px 13px   14px 44px
+    background: #FFFFFF
+    border: 1px solid #DBE2EC
+    font-size: 14px
+    line-height: 16px
+    color: #333
+    width: 100%
+
+
+  ::-webkit-input-placeholder
+    color: #D8DFE8
+    font-size: 14px
+    line-height: 16px
+
+  ::-moz-placeholder
+    color: #D8DFE8
+    font-size: 14px
+    line-height: 16px
+
+  :-ms-input-placeholder
+    color: #D8DFE8
+    font-size: 14px
+    line-height: 16px
+  :-moz-placeholder
+    color: #D8DFE8
+    font-size: 14px
+    line-height: 16px
+
+  #searchsubmit
+    font-weight: 500
+    font-size: 15px
+    line-height: 22px
+    text-align: center
+    background: linear-gradient(89.25deg, #005CD7 -11.83%, #179EDE 110.67%)
+    color: #FFFFFF
+    padding: 11px 72px
+    border: none
+    &:hover
+      background: linear-gradient(89.25deg, #333 -11.83%, #333 110.67%)
+
 
 //
 // Footer
@@ -1252,8 +1317,8 @@ $gray_color: #2a2d2f
     margin: 0
   .home__link-about,
   .home__about .link
-    margin-right: 0!important
-    margin-top: 20px!important
+    margin-right: 0 !important
+    margin-top: 20px !important
   .footer-logo svg
     max-width: 200px
 
@@ -1267,7 +1332,7 @@ $gray_color: #2a2d2f
 
 @media (max-width: 992px)
   .menu-icon-toggle
-    display: inline-block!important
+    display: inline-block !important
   .link__large
     min-width: 100%
     max-width: 100%
@@ -1308,16 +1373,19 @@ $gray_color: #2a2d2f
 
   .home__about .home__first-about
     padding: 30px 15px 40px 15px
+
     .main-title
       margin-bottom: 20px
 
   .home__about
     margin: 40px 0 0
+
     .home__second-about
-      padding-left: 0!important
+      padding-left: 0 !important
       padding-top: 40px
+
     .home__title-box
-      margin-bottom: 40px!important
+      margin-bottom: 40px !important
   .footer__first-row:before
     right: -50%
   .footer__second-row:before
