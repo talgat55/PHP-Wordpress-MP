@@ -532,5 +532,92 @@ if (!function_exists('loop_columns')) {
 }
 
 
-
 remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+
+/*
+* Set post per page in archive page
+*/
+function wpsites_query($query)
+{
+    if ($query->is_archive() && $query->is_main_query() && !is_admin()) {
+        $query->set('posts_per_page', 18);
+    }
+}
+
+add_action('pre_get_posts', 'wpsites_query');
+
+
+/*
+ *  Text button add
+ */
+add_filter('single_add_to_cart_text', 'woo_custom_cart_button_text');
+function woo_custom_cart_button_text()
+{
+    return __('В КОРЗИНУ', 'woocommerce');
+}
+
+/*
+ * Show button add to cart if price empty
+ */
+function item_is_purchasable($purchasable, $product)
+{
+    if ($product->get_price() == 0)
+        $purchasable = true;
+    return $purchasable;
+}
+
+add_filter('woocommerce_is_purchasable', 'item_is_purchasable', 10, 2);
+
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+
+/*
+ *  Change tabs
+ */
+add_action('woocommerce_after_single_product_summary', 'add_content_after_addtocart_button_func2');
+
+function add_content_after_addtocart_button_func2()
+{
+
+    // Echo content.
+
+    echo ' 
+            <div class="woocommerce-tabs wc-tabs-wrapper">
+		            <ul class="tabs wc-tabs" role="tablist">
+						<li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
+					        <a href="#tab-description">
+						        Описание					
+						    </a>
+				        </li>
+				        <li class="description_tab " id="tab-title-character" role="tab" aria-controls="tab-character">
+					        <a href="#tab-character">
+						        Характеристика					
+						    </a>
+				        </li>
+					</ul>
+                    <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description" style="">
+                        
+                            <h2>Описание</h2>
+        
+                         ';
+                            woocommerce_template_single_excerpt();
+
+        echo '
+                    </div>
+		        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-character" role="tabpanel" aria-labelledby="tab-title-description" style="">
+                        
+                            <h2>Характеристика</h2>
+                                ';
+                            the_content();
+
+             echo  '
+                    </div>
+			</div>
+    ';
+
+}
+
