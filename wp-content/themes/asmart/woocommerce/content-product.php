@@ -47,9 +47,7 @@ if (empty($product) || !$product->is_visible()) {
                         Акция
                     </div>
                 <?php endif; ?>
-
             </div>
-
         <?php endif;
 
         /**

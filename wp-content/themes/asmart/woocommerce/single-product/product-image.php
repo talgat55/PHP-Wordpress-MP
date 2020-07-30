@@ -37,7 +37,27 @@ $wrapper_classes   = apply_filters(
 );
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+    <?php
+    $newProduct = get_field('new_item', get_the_ID());
+    $promoProduct = get_field('promo',  get_the_ID());
+    $img = wp_get_attachment_url(get_post_thumbnail_id( get_the_ID()), 'product-popular');
+    if ($newProduct == 'yes' || $promoProduct == 'yes') : ?>
+        <div class="product-item__tags">
+            <?php if ($newProduct == 'yes'): ?>
+                <div class="product-item__tags_new">
+                    Новинка
+                </div>
+            <?php endif; ?>
+
+            <?php if ($promoProduct == 'yes'): ?>
+                <div class="product-item__tags_promo">
+                    Акция
+                </div>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
 	<figure class="woocommerce-product-gallery__wrapper">
+
 		<?php
 		if ( $product->get_image_id() ) {
 			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );

@@ -112,61 +112,7 @@
 <!--    </div>-->
 <!--</a>-->
 
-<!-- Modal  Promo -->
-<div class="modal fade" id="promo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Получить скидку</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <?php echo do_shortcode('[contact-form-7 id="238"  html_class="form-custom" title="Получить скидку"]'); ?>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Modal  Service -->
-<div class="modal fade " id="service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <p class="title">
-                    Заполните поля с данными, чтобы  мы могли с Вами связаться
-                </p>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <?php echo do_shortcode('[contact-form-7 id="239"   html_class="form-service" title="Заказать услугу"]'); ?>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal  Review -->
-<div class="modal fade" id="review-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Отправить отзыв</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <?php echo do_shortcode('[contact-form-7  html_class="form-review"  id="242" title="Отзыв"]'); ?>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Modal  Success -->
 <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -186,14 +132,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 <div class="overlay-layer"></div>
 

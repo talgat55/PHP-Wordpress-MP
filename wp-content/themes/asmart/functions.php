@@ -600,8 +600,7 @@ function add_content_after_addtocart_button_func2()
 				        </li>
 					</ul>
                     <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description" style="">
-                        
-                            <h2>Описание</h2>
+                         
         
                          ';
                             woocommerce_template_single_excerpt();
@@ -609,8 +608,7 @@ function add_content_after_addtocart_button_func2()
         echo '
                     </div>
 		        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-character" role="tabpanel" aria-labelledby="tab-title-description" style="">
-                        
-                            <h2>Характеристика</h2>
+                         
                                 ';
                             the_content();
 
@@ -621,3 +619,14 @@ function add_content_after_addtocart_button_func2()
 
 }
 
+
+add_filter( 'woocommerce_single_product_carousel_options', 'sf_update_woo_flexslider_options' );
+/**
+ * Filer WooCommerce Flexslider options - Add Navigation Arrows
+ */
+function sf_update_woo_flexslider_options( $options ) {
+
+    $options['directionNav'] = true;
+
+    return $options;
+}

@@ -9,15 +9,15 @@ get_header(); ?>
     <div id="primary" class="content-area  page-collection  page-main">
 
         <div class="container">
-            <div class="row flex">
-                <div class="col-sm-4 col-xs-12   ">
-                    <h1 class="sub-title  left">
-                        <?php printf( __( 'Результаты поиска: %s', 'light' ), '<span>' . get_search_query() . '</span>' ); ?>
-                    </h1>
+            <div class="row  ">
 
-                </div>
-                <div class="col-sm-8 col-xs-12   ">
+                <div class="col-sm-12 col-xs-12   ">
                     <div class="content">
+                        <h1 class="sub-title  left">
+                            <?php printf( __( 'Результаты поиска: %s', 'light' ), '<span>' . get_search_query() . '</span>' ); ?>
+                        </h1>
+                        <?php  get_search_form(); ?>
+
                         <ul class="list-search-result">
                             <?php
                             if ( have_posts() ) :

@@ -15,15 +15,16 @@ jQuery(document).ready(function () {
     loadMoreNews();
     switchContentNewsArticles();
     acccordionCats();
+    productRelatedCarousel();
     // ajaxLoadData();
     // mobileMenu();
-    // phoneMask();
+    phoneMask();
     // reviewArrowDown();
     // clientsCarousel();
     // scrollToDiv();
     // backToTop();
     // fixedHeader();
-    // OpenModal();
+    OpenModal();
     // partnersCarousel();
     // reviewSlider();
     // awardsCarousel();
@@ -35,7 +36,7 @@ jQuery(document).ready(function () {
     //
     // jQuery('.lazy').lazy();
     //
-    jQuery('.menu-icon-toggle').on('click', function(e) {
+    jQuery('.menu-icon-toggle').on('click', function (e) {
         jQuery('body').toggleClass('open');
 
         e.preventDefault();
@@ -202,53 +203,55 @@ function lasyLoad() {
 //----------------------------------
 //  Input phone field Mask
 //------------------------------------
-// function phoneMask() {
-//     "use strict";
-//     let phone_class = jQuery('.phone-input');
-//     if (phone_class.length) {
-//         phone_class.inputmask({"mask": "+7 (999) 999-9999"});
-//
-//     }
-// }
+function phoneMask() {
+    "use strict";
+    let phone_class = jQuery('.phone-input');
+    if (phone_class.length) {
+        phone_class.inputmask({"mask": "+7 (999) 999-9999"});
+
+    }
+}
 
 
 //----------------------------------
 //     Modal   Main
 //---------------------------------------
-//
-// function OpenModal() {
-//     "use strict";
-//     jQuery(".show-modal-promo").click(function () {
-//         jQuery('#promo-modal').fadeIn().addClass('in show');
-//         jQuery(' .overlay-layer').addClass('active');
-//         return false;
-//     });
-//
-//
-//     jQuery(".single-services .banner-section .link_alt-theme").click(function () {
-//         jQuery('#service-modal').fadeIn().addClass('in show');
-//         jQuery(' .overlay-layer').addClass('active');
-//
-//         //  add value for hidden input
-//         jQuery('#service-modal  input[name="service_name"]').val(jQuery(document).find("title").text());
-//         return false;
-//     });
-//
-//     jQuery(".review .review__bottom .link").click(function () {
-//         jQuery('#review-modal').fadeIn().addClass('in show');
-//         jQuery(' .overlay-layer').addClass('active');
-//
-//         return false;
-//     });
-//
-//
-//     jQuery("#promo-modal .close, #service-modal .close, #review-modal .close, #success-modal .close").click(function () {
-//         jQuery('#promo-modal, #service-modal, #review-modal, #success-modal').hide().removeClass('in show');
-//         jQuery(' .overlay-layer').removeClass('active');
-//         return false;
-//     });
-//
-// }
+
+function OpenModal() {
+    "use strict";
+
+
+    jQuery('body').on('click', ".booking-link", function () {
+        var $this = jQuery(this);
+        jQuery('#booking-modal').fadeIn().addClass('in show');
+        jQuery(' .overlay-layer').addClass('active');
+        return false;
+    });
+
+    // jQuery(".single-services .banner-section .link_alt-theme").click(function () {
+    //     jQuery('#service-modal').fadeIn().addClass('in show');
+    //     jQuery(' .overlay-layer').addClass('active');
+    //
+    //     //  add value for hidden input
+    //     jQuery('#service-modal  input[name="service_name"]').val(jQuery(document).find("title").text());
+    //     return false;
+    // });
+    //
+    // jQuery(".review .review__bottom .link").click(function () {
+    //     jQuery('#review-modal').fadeIn().addClass('in show');
+    //     jQuery(' .overlay-layer').addClass('active');
+    //
+    //     return false;
+    // });
+    //
+    //
+    jQuery("#booking-modal .close, #service-modal .close, #review-modal .close, #success-modal .close").click(function () {
+        jQuery('.modal').hide().removeClass('in show');
+        jQuery(' .overlay-layer').removeClass('active');
+        return false;
+    });
+
+}
 
 
 //----------------------------------
@@ -772,6 +775,55 @@ function newsArticlesCarousel() {
     }
 }
 
+//----------------------------------
+//  Product related carousel
+//---------------------------------------
+
+function productRelatedCarousel() {
+    "use strict";
+    var carouselClass = jQuery('.single-product__list-related-products');
+
+    if (carouselClass.length) {
+        carouselClass.slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            // lazyLoad: 'ondemand',
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false,
+                        dots: true,
+                    }
+                }
+            ],
+
+        });
+    }
+}
+
+
 //---------------------------------------
 //   Home click by News Articles
 //---------------------------------------
@@ -955,6 +1007,24 @@ function switchContentNewsArticles() {
     });
 }
 
+
+document.addEventListener('wpcf7mailsent', function (event) {
+
+    jQuery('.modal').hide().removeClass('in show');
+    jQuery('#success-modal').fadeIn().addClass('in show');
+    setTimeout(function () {
+        jQuery(' .overlay-layer').removeClass('active');
+        jQuery('#success-modal').hide().removeClass('in show');
+    }, 2000);
+
+
+    // if (event.detail.contactFormId == "51") {
+    //     successModal();
+    // }
+    //  if (event.detail.contactFormId == "168") {
+    //     successModal();
+    // }
+}, false);
 
 
 

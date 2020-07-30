@@ -655,7 +655,8 @@ $gray_color: #2a2d2f
 
 .woocommerce-page
   .heading-title
-    margin-bottom: 0!important
+    margin-bottom: 0 !important
+
   .page-main
     padding-top: 36px
 
@@ -664,6 +665,7 @@ $gray_color: #2a2d2f
   .heading-title
     //margin-bottom: 38px!important
     display: none
+
   .single-product_wrapper
     margin-top: 38px
 
@@ -682,6 +684,7 @@ $gray_color: #2a2d2f
       display: flex
       align-items: center
       margin-bottom: 4px
+
     .meta__info_title
       width: 112px
       min-width: 129px
@@ -708,44 +711,84 @@ $gray_color: #2a2d2f
       text-align: center
 
   .woocommerce div.product form.cart
-    margin-bottom: 0!important
+    margin-bottom: 0 !important
 
   .single_add_to_cart_button
-    font-weight: 500!important
-    font-size: 15px!important
-    line-height: 22px!important
-    text-align: center!important
-    color: #FFFFFF!important
-    padding: 12px 36px!important
-    background: linear-gradient(89.41deg, #005CD7 -11.83%, #179EDE 110.67%)!important
-    text-transform: uppercase!important
+    font-weight: 500 !important
+    font-size: 15px !important
+    line-height: 22px !important
+    text-align: center !important
+    color: #FFFFFF !important
+    padding: 12px 36px !important
+    background: linear-gradient(89.41deg, #005CD7 -11.83%, #179EDE 110.67%) !important
+    text-transform: uppercase !important
     border: none
     transition: all .3s
-    border-radius: 0!important
+    border-radius: 0 !important
+
     &:focus,
     &:hover
-      border: none!important
-      background: linear-gradient(89.41deg, #333 -11.83%, #333 110.67%)!important
+      border: none !important
+      background: linear-gradient(89.41deg, #333 -11.83%, #333 110.67%) !important
 
+  .woocommerce-product-gallery__trigger
+    display: none
+
+  .woocommerce-product-gallery
+    border: 1px solid #DBE2EC
+    position: relative
+    .flex-control-nav
+      display: none
+    .flex-direction-nav
+      padding: 0
+      margin: 0
+      li
+        list-style: none
+
+        .flex-prev,
+        .flex-next
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          text-indent: -999999px
+          width: 22px
+          height: 22px
+          transition: all .3s
+          &:hover
+            opacity: .5
+
+
+        .flex-next
+          right: 12px
+          background: url(../images/arrow_slider.png)
+
+        .flex-prev
+          left: 12px
+          background: url(../images/arrow_slider.png)
+          transform: translateY(-50%) rotateZ(180deg)
 
 
 .woocommerce
   .products
     margin: 0 -5px
+
+  .single-product__item-related,
   .product-item
 
-    margin: 0!important
-    padding: 0 5px 11px 5px!important
+    margin: 0 !important
+    padding: 0 5px 11px 5px !important
+
     .product-item_wrapper
       border: 1px solid #ECF5FA
       position: relative
+
       .product-item__link_overflow
         position: absolute
         top: 0
         left: 0
         width: 100%
         height: 100%
-        background: rgba(236,245,250, .8)
+        background: rgba(236, 245, 250, .8)
         z-index: 10
         align-items: center
         display: flex
@@ -753,6 +796,7 @@ $gray_color: #2a2d2f
         opacity: 0
         visibility: hidden
         transition: all .3s
+
       &:hover
         .product-item__link_overflow
           visibility: visible
@@ -762,6 +806,7 @@ $gray_color: #2a2d2f
         display: flex
         position: absolute
         padding: 6px
+
         .product-item__tags_promo,
         .product-item__tags_new
           font-family: Roboto
@@ -772,6 +817,7 @@ $gray_color: #2a2d2f
           text-align: center
           border-radius: 2px
           padding: 3px 15px
+
         .product-item__tags_promo
           color: #FF0000
           background: #FFEFEC
@@ -783,10 +829,11 @@ $gray_color: #2a2d2f
 
     .attachment-woocommerce_thumbnail
       max-height: 160px
-      width: auto!important
-      margin: 0 auto!important
+      width: auto !important
+      margin: 0 auto !important
+
     .button.product_type_simple
-      display: none!important
+      display: none !important
 
     .product-item__title-block
       display: block
@@ -801,6 +848,127 @@ $gray_color: #2a2d2f
         margin: 0
         font-weight: normal
         text-align: left
+
+.woocommerce div.product .woocommerce-tabs .panel
+  margin-bottom: 25px
+
+.single-product
+  .tabs.wc-tabs
+    background: #ECF5FA
+    padding: 0 !important
+    margin: 0 0 18px !important
+
+    &:before
+      display: none !important
+
+    .description_tab
+      border: none !important
+      border-radius: 0 !important
+      background: transparent !important
+      padding: 0 !important
+      margin: 0 !important
+
+      &:before,
+      &:after
+        display: none
+
+      a
+        font-weight: normal !important
+        font-size: 16px !important
+        line-height: 19px
+        text-align: center
+        color: #858585
+        padding: 10px 65px 8px !important
+        border-bottom: 2px solid transparent !important
+
+      &.active
+        a
+          color: $theme_color !important
+          border-color: $theme_color !important
+
+
+  .title__related
+    font-weight: bold
+    font-size: 35px
+    line-height: 42px
+    color: #424242
+    margin: 0 0 40px
+
+  .single-product__list-related-products
+    margin: 0
+    padding: 0
+    display: flex
+
+    li
+      list-style: none
+
+  .single-product__img-related
+    display: flex
+    justify-content: center
+    padding: 10px 0
+
+    img
+      max-height: 160px
+
+  .slick-dots li
+    width: 6px
+    height: 6px
+    margin: 0 6px
+
+  .slick-dots
+    text-align: center
+    bottom: -20px
+
+  .slick-dots li button:before
+    display: none
+
+  .slick-dots li.slick-active button
+    width: 10px
+    height: 10px
+    background: $theme_color
+    border: 1px solid $theme_color
+    border-radius: 50%
+
+  .slick-dots li button
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    background: #B8B8B8
+    padding: 0
+
+  .woocommerce-product-gallery__wrapper
+    img
+      max-height: 307px
+      width: auto !important
+      display: table
+      margin: 0 auto
+  .product-item__tags
+    display: flex
+    position: absolute
+    padding: 6px
+    z-index: 5
+
+    .product-item__tags_promo,
+    .product-item__tags_new
+      font-family: Roboto
+      font-style: normal
+      font-weight: 300
+      font-size: 12px
+      line-height: 12px
+      text-align: center
+      border-radius: 2px
+      padding: 3px 15px
+
+    .product-item__tags_promo
+      color: #FF0000
+      background: #FFEFEC
+      margin-left: 3px
+
+    .product-item__tags_new
+      color: #005BD7
+      background: #ECF5FA
+
+
 
 //
 // Home service
@@ -1294,11 +1462,12 @@ $gray_color: #2a2d2f
   display: flex
   justify-content: space-between
   position: relative
+
   &:before
     content: ""
     display: block
     background: url(../images/search-icon.png)
-    background-repeat: no-repeat!important
+    background-repeat: no-repeat !important
     width: 16px
     height: 16px
     position: absolute
@@ -1307,7 +1476,7 @@ $gray_color: #2a2d2f
     left: 13px
 
   #s
-    padding: 14px 13px   14px 44px
+    padding: 14px 13px 14px 44px
     background: #FFFFFF
     border: 1px solid #DBE2EC
     font-size: 14px
@@ -1344,10 +1513,93 @@ $gray_color: #2a2d2f
     color: #FFFFFF
     padding: 11px 72px
     border: none
+
     &:hover
       background: linear-gradient(89.25deg, #333 -11.83%, #333 110.67%)
 
 
+.overlay-layer
+  top: 0
+  left: 0
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 100
+  background: rgba(0, 0, 0, .5)
+  transition: all .3s
+  visibility: hidden
+  opacity: 0
+
+  &.active
+    visibility: visible
+    opacity: 1
+
+.modal
+  .close:active,
+  .close:focus
+    outline: none
+    box-shadow: none
+
+
+
+.form-main
+
+  .policy-block
+    display: flex
+    p
+      margin-left: 10px
+
+  input
+    padding: 14px 13px 14px 14px
+    background: #FFFFFF
+    border: 1px solid #DBE2EC
+    font-size: 14px
+    line-height: 16px
+    color: #333
+    width: 100%
+    margin-bottom: 10px
+
+  input[type=checkbox]
+    width: auto
+
+  .wpcf7-submit
+    margin-bottom: 0
+    color: #fff
+    background: $theme_color
+    transition: all .3s
+    &:hover
+      background: #333
+      color: #fff
+
+
+.woocommerce-message
+  border-top-color: $theme_color
+
+.woocommerce-message::before
+  color: $theme_color
+
+
+//
+// Seaerch  page
+
+.list-search-result
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+    margin-bottom: 20px
+    a
+      color: #333
+      transition: all .3s
+      &:hover
+        color: $theme_color
+        text-decoration: none
+
+
+
+
+
+//
 //
 // Footer
 //

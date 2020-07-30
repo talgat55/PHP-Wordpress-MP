@@ -20,7 +20,7 @@ get_header();
                 <div class="col row-sidebar-catalog">
                     <?php   woocommerce_product_category(); ?>
                 </div>
-                <div class="col  single-product-row">
+                <div class="col-12 col-lg-9  single-product-row">
                     <?php get_search_form(); ?>
                     <?php while (have_posts()) :   the_post(); ?>
                         <?php the_content(); ?>
