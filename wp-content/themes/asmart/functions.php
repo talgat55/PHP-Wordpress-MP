@@ -502,7 +502,7 @@ function woocommerce_product_category()
                 echo '<ul>';
                 foreach ($child as $childValue) {
                     echo '<li>';
-                    $termChild = get_term_by('id', $childValue, $taxonomy);
+                    $termChild = get_term_by( 'id', $childValue, $taxonomy );
 
                     echo '<a href="' . esc_url(get_term_link($termChild)) . '" class="' . $termChild->slug . '">';
                     echo $termChild->name;
