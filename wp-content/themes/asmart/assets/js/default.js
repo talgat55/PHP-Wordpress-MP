@@ -950,7 +950,18 @@ function acccordionCats() {
         jQuery(this).toggleClass("active");
         jQuery(this).parent().toggleClass("active");
     });
+
+    //  on mobile show hide block categories
+    jQuery('.catalog-menu__title').click(function () {
+        jQuery(this).parent().find('.woocommerce-categories').stop().slideToggle();
+        jQuery(this).toggleClass("active");
+        jQuery(this).parent().toggleClass("active");
+    });
+
+
 }
+
+
 
 //---------------------------------------
 //   Switch content news articles
