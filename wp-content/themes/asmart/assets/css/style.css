@@ -1596,7 +1596,9 @@
     margin-right: 0 !important;
     margin-top: 20px !important; }
   .footer-logo svg {
-    max-width: 200px; } }
+    max-width: 200px; }
+  .row-sidebar-catalog {
+    max-width: 240px; } }
 
 @media (max-width: 1120px) {
   .header__bottom .main-main-container li a {
