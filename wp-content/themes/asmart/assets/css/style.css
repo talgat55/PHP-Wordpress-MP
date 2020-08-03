@@ -1582,6 +1582,10 @@
 .footer .bottom-copyright {
   white-space: nowrap; }
 
+.single-product .flex-viewport {
+  width: 404px;
+  height: 365px; }
+
 @media (max-width: 1200px) {
   .header__phone-item {
     margin-right: 30px; }
