@@ -21,7 +21,7 @@ get_header(); ?>
         <div class="container">
             <div class="row flex">
 
-                <div class="col-sm-12 col-xs-12   ">
+                <div class="col-sm-12 col-xs-12 <?php  if(is_page( 'cart' )){   echo ' row-cart';   } ?>   ">
                     <div class="content">
                         <?php
                         while (have_posts()) : the_post();

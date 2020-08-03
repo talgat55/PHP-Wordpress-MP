@@ -12,7 +12,7 @@ if (function_exists('register_nav_menus')) {
 
 
 /*
-* Add Feature Imagee
+* Add Feature Image
 **/
 add_theme_support('post-thumbnails');
 add_image_size('product-popular', 272, 307, false);
@@ -146,62 +146,8 @@ if (function_exists('acf_add_options_page')) {
 
 
 }
-/*
- *  load items for Portfolio ajax
- */
-//
-//function portfolioItems($page){
-//    $arg = [
-//        'posts_per_page' => 12,
-//        'post_type' => 'portfolio',
-//        'orderby' => 'date',
-//        'order' => 'DESC',
-//        'status' => 'publish',
-//    ];
-//
-//    if (!empty($page)) {
-//        $arg['paged'] = $page;
-//    } else {
-//        $arg['paged'] = '1';
-//    }
-//
-//
-//    $the_query = new WP_Query($arg);
-//
-//    while ($the_query->have_posts()) :
-//        $the_query->the_post();
-//        $post_id = $the_query->post->ID;
-//        set_query_var('type-item', 'true');
-//        get_template_part('inc/portfolio-item');
-//    endwhile;
-//}
-//
 
 
-/**
- *
- * AJAX Load  Portfolio
- */
-//
-//function be_ajax_portfolio_load()
-//{
-//    $count = wp_count_posts('portfolio');
-//    ob_start();
-//    portfolioItems($_POST['page']);
-//    wp_reset_postdata();
-//    $data = ob_get_clean();
-//    $response = [
-//        'data' => $data,
-//        'count' => $count
-//    ];
-//    wp_send_json_success($response);
-//    wp_die();
-//}
-//
-//add_action('wp_ajax_be_ajax_portfolio_load', 'be_ajax_portfolio_load');
-//add_action('wp_ajax_nopriv_be_ajax_portfolio_load', 'be_ajax_portfolio_load');
-//
-//
 /**
  *
  * AJAX Load  News
@@ -540,14 +486,14 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 /*
 * Set post per page in archive page
 */
-function wpsites_query($query)
-{
-    if ($query->is_archive() && $query->is_main_query() && !is_admin()) {
-        $query->set('posts_per_page', 18);
-    }
-}
-
-add_action('pre_get_posts', 'wpsites_query');
+//function wpsites_query($query)
+//{
+//    if ($query->is_archive() && $query->is_main_query() && !is_admin()) {
+//        $query->set('posts_per_page', 18);
+//    }
+//}
+//
+//add_action('pre_get_posts', 'wpsites_query');
 
 
 /*
@@ -573,6 +519,7 @@ add_filter('woocommerce_is_purchasable', 'item_is_purchasable', 10, 2);
 
 
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 
 /*
@@ -629,4 +576,33 @@ function sf_update_woo_flexslider_options( $options ) {
     $options['directionNav'] = true;
 
     return $options;
+}
+
+
+
+add_filter('woocommerce_default_address_fields', 'override_default_address_checkout_fields', 20, 1);
+function override_default_address_checkout_fields( $address_fields ) {
+    $address_fields['first_name']['placeholder'] = 'Имя';
+    $address_fields['last_name']['placeholder'] = 'Фамилия';
+    $address_fields['address_1']['placeholder'] = 'Адрес';
+    $address_fields['billing_phone']['placeholder'] = 'Телефон';
+    return $address_fields;
+}
+
+/*
+ *  Remove fields from checkout
+ */
+function jeherve_remove_state_field( $fields ) {
+    unset( $fields['state'] ,$fields['postcode'], $fields['city'], $fields['company'], $fields['country'], $fields['address_2'] );
+
+
+    return $fields;
+}
+add_filter( 'woocommerce_default_address_fields', 'jeherve_remove_state_field' );
+
+
+add_filter( 'woocommerce_billing_fields', 'wc_unrequire_wc_phone_field');
+function wc_unrequire_wc_phone_field( $fields ) {
+    $fields['billing_phone']['required'] = false;
+    return $fields;
 }

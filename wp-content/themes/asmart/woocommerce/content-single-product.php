@@ -214,6 +214,6 @@ if (post_password_required()) {
         </ul>
     <?php endif; ?>
 </div>
-<?php get_template_part('inc/modal-booking');  ?>
+
 
 <?php do_action('woocommerce_after_single_product'); ?>

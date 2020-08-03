@@ -112,7 +112,7 @@
 <!--    </div>-->
 <!--</a>-->
 
-
+<?php get_template_part('inc/modal-booking');  ?>
 
 <!-- Modal  Success -->
 <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

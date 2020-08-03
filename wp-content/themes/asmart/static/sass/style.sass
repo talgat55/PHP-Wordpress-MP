@@ -14,7 +14,25 @@ $bermuda: #77D7B9
 $theme_color: #005BD7
 $theme_color_alt: #1bb684
 $gray_color: #2a2d2f
-
+.lmp_button
+  font-size: 15px!important
+.checkout-button
+  font-weight: 500!important
+  font-size: 15px!important
+  line-height: 22px!important
+  text-align: center!important
+  color: #FFFFFF!important
+  display: inline-block!important
+  text-transform: uppercase!important
+  padding: 12px 32px!important
+  transition: all .3s!important
+  background: linear-gradient(89.41deg, #005CD7 -11.83%, #179EDE 110.67%)!important
+  &:hover
+    text-decoration: none!important
+    background: linear-gradient(89.41deg, #424242 -11.83%, #424242 110.67%)!important
+    color: #fff!important
+#place_order,
+.lmp_button,
 .link
   font-weight: 500
   font-size: 15px
@@ -129,22 +147,28 @@ $gray_color: #2a2d2f
 
   .sep
     padding: 0 3px 0 4px
+.mobile-menu .phone-numbers__mobile svg
+  display: none!important
 
 //
 //  Header
 //
 .mobile-menu
-  display: none !important
+  //display: none !important
   position: absolute
   z-index: 99
   background: #fff
   top: 79px
   left: 0
   height: 100%
+  transition: all .3s ease-in-out
+  opacity: 0
+  visibility: hidden
 
   .open &
-    display: flex !important
-
+    //display: flex !important
+    opacity: 1
+    visibility: visible
   .phone-numbers__mobile
     a
       text-decoration: none
@@ -1716,7 +1740,71 @@ $gray_color: #2a2d2f
     width: 404px
     height: 365px
 
+//
+// Cart
+//
+.woocommerce-cart-form
 
+  .product-price,
+  .product-subtotal,
+  .coupon
+    display: none!important
+
+.woocommerce-cart
+  .cart-collaterals
+    .shop_table.shop_table_responsive,
+    h2
+      display: none!important
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals
+  width: auto!important
+
+.woocommerce-billing-fields__field-wrapper
+  .form-row
+    float: none
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    label
+      display: none!important
+
+.checkout.woocommerce-checkout
+  .form-row
+    input
+      padding: 14px 13px 14px 14px
+      background: #FFFFFF
+      border: 1px solid #DBE2EC
+      font-size: 14px
+      line-height: 16px
+      color: #333
+      width: 100%
+      margin-bottom: 10px
+  .woocommerce-input-wrapper
+    width: 100%
+
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last
+  width: 100%
+  overflow: visible
+  float: none!important
+.woocommerce-order-received .woocommerce-Price-amount.amount
+  opacity: 0!important
+
+.woocommerce-order-received .woocommerce-table.woocommerce-table--order-details.shop_table.order_details tfoot,
+.woocommerce-order-received .woocommerce-table__product-table.product-total,
+.woocommerce-order-received .woocommerce-customer-details,
+.woocommerce-thankyou-order-details .woocommerce-order-overview__total.total,
+#order_review .product-total,
+.shop_table.woocommerce-checkout-review-order-table  tfoot,
+#billing_phone_field
+  display: none!important
+.page-template,
+.product-template-default,
+.page-template-default
+  overflow-y: hidden
 @media (max-width: 1200px)
   .header__phone-item
     margin-right: 30px
@@ -1846,7 +1934,11 @@ $gray_color: #2a2d2f
     -webkit-box-pack: justify
     -ms-flex-pack: justify
     justify-content: space-between
-
+    padding: 0 0 10px 0
+    h3
+      margin: 0
+      font-size: 20px
+      font-weight: 500
     svg
       transition: all .3s
 
@@ -1863,7 +1955,10 @@ $gray_color: #2a2d2f
   .woocommerce-categories
     display: none
 
-
+  ul.d-flex.soc-links.justify-content-end
+    -webkit-box-pack: start!important
+    -ms-flex-pack: start!important
+    justify-content: start!important
 
 @media (max-width: 768px)
   .home-slider_slider
@@ -1899,13 +1994,35 @@ $gray_color: #2a2d2f
       margin-right: 35px
 
 @media (max-width: 600px)
+  .page-main
+    padding-bottom: 40px!important
   .news-articles__cats
     margin-bottom: 20px!important
     margin-top: 20px!important
   .heading-title
     font-size: 26px
     line-height: 1.5
+  .single-product_wrapper  .row-sidebar-catalog,
+  .col-12
+    padding-left: 0!important
+    padding-right: 0!important
+  .home
+    .home-news-articles
+      .main-title,
+      .home-news-articles__cats
+        margin-left: 0!important
+        margin-right: 0!important
+    .home__about
+      background: #ECF5FA
 
+      .home__first-about
+        background: transparent!important
+  .woocommerce-page
+    .woocommerce
+      .row-sidebar-catalog,
+      .row-list-catalog
+        padding-left: 0!important
+        padding-right: 0!important
   .link__large
     padding: 15px
 
@@ -1957,6 +2074,10 @@ $gray_color: #2a2d2f
     li
       display: inline-block
 
+  .woocommerce-cart
+    .row-cart
+      padding-right: 0!important
+      padding-left: 0!important
 
 @media (max-width: 575px)
 
