@@ -5,6 +5,8 @@
 get_header();
 
 $contentAfter = get_field('content_about');
+$fileReqAbout = get_field('file_rekviziti_home', 'option');
+$fileDocAbout = get_field('file_docs_home', 'option'); ;
 ?>
 <?php get_template_part('inc/breadsrumb'); ?>
     <section class="page-about   page-main">
@@ -141,7 +143,7 @@ $contentAfter = get_field('content_about');
                         <?php echo $contentAfter; ?>
                     </div>
                     <div class="d-lg-flex justify-content-center">
-                        <a class="link__large  d-flex   align-items-center" href="#">
+                        <a  target="_blank"  class="link__large  d-flex   align-items-center" href="<?php echo $fileReqAbout; ?> ">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.2051 7.61523L7 11.8203L2.79494 7.61523L3.56836 6.84181L6.45312 9.72658V0H7.54688V9.72658L10.4316 6.84181L11.2051 7.61523ZM14 12.9062H0V14H14V12.9062Z"
@@ -149,7 +151,8 @@ $contentAfter = get_field('content_about');
                             </svg>
                             Реквизиты организации
                         </a>
-                        <a class="link__large  d-flex align-items-center" href="#">
+
+                        <a  target="_blank" class="link__large  d-flex align-items-center" href="<?php echo $fileDocAbout; ?>">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.2051 7.61523L7 11.8203L2.79494 7.61523L3.56836 6.84181L6.45312 9.72658V0H7.54688V9.72658L10.4316 6.84181L11.2051 7.61523ZM14 12.9062H0V14H14V12.9062Z"

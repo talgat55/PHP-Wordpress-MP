@@ -6,8 +6,9 @@
  * Time: 15:08
  */
 $textAbout = get_field('text_about_home');
-$fileReqAbout = get_field('file_rekviziti_home');
-$fileDocAbout = get_field('file_docs_home');
+$fileReqAbout = get_field('file_rekviziti_home', 'option');
+$fileDocAbout = get_field('file_docs_home', 'option'); ;
+
 ?>
 <section class="home__about">
     <div class="container">
