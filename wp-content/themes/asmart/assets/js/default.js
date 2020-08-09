@@ -430,11 +430,24 @@ function loadMoreNews() {
                     var ajaxCount = res.data.count.publish;
 
                     if (countCurrentItem == ajaxCount || countCurrentItem > ajaxCount) {
+
+
                         jQuery('.news-articles-page .load-more').fadeOut();
+                        setTimeout(function(){
+                            jQuery('.load-more__row').append('<div class="w-100 text-center no-more-articles">Нет записей</div>');
+                        }, 400);
+                        setTimeout(function(){
+                            jQuery('.no-more-articles').fadeOut();
+                            setTimeout(function(){
+                                jQuery('.no-more-articles').remove();
+                            }, 200);
+                        }, 2000);
+
                     }
 
 
                 } else {
+
                     console.log(res);
                 }
             }

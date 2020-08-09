@@ -134,7 +134,8 @@ $gray_color: #2a2d2f
   display: flex
   align-items: center
   margin-top: 45px
-
+  svg
+    margin: 0 5px
   li
     list-style: none
 
@@ -810,7 +811,7 @@ $gray_color: #2a2d2f
 
 .woocommerce
   .products
-    margin: 0 -5px
+    margin: 0 -5px!important
 
   .single-product__item-related,
   .product-item
@@ -1131,6 +1132,8 @@ $gray_color: #2a2d2f
     list-style: none
     display: flex
 
+
+
 //
 // Home About
 //
@@ -1243,6 +1246,13 @@ $gray_color: #2a2d2f
 
     &.news-articles__item
       padding: 0 5px 10px 5px
+    .news-articles__date
+      display: none
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      color: #B6B6B6
+      margin-bottom: 9px
 
     .news-articles__image
       img
@@ -1289,7 +1299,9 @@ $gray_color: #2a2d2f
 .news-articles-page
   .load-more__row
     margin: 15px 0 69px
-
+  .news-articles__date
+    display: block!important
+    width: 100%
 //
 // Single news and articles
 //
@@ -1974,6 +1986,13 @@ $gray_color: #2a2d2f
     -webkit-box-pack: start!important
     -ms-flex-pack: start!important
     justify-content: start!important
+
+@media (min-width: 768px)
+  .modal.show .modal-dialog
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
 
 @media (max-width: 768px)
   .home-slider_slider

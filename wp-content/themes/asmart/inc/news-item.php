@@ -17,6 +17,9 @@ $anons = get_field('anons',get_the_ID() );
             </a>
         </div>
         <div class="news-articles__item-content">
+            <div class="news-articles__date">
+                <?php echo  get_the_date('d.m.Y'); ?>
+            </div>
             <h3 class="news-articles__title">
                 <a href="<?php echo get_the_permalink(get_the_ID()); ?>">
                     <?php echo get_the_title(get_the_ID()); ?>

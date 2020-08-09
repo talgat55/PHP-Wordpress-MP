@@ -25,7 +25,7 @@ $products = $query->get_products();
                     <h2 class="main-title">
                         Популярные товары
                     </h2>
-                    <a href="#" class="link__alt">
+                    <a href="/catalog/" class="link__alt">
                         ВСЕ ТОВАРЫ
                     </a>
             </div>
