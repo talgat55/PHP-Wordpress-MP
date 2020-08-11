@@ -54,7 +54,7 @@ $classArray = ['one', 'two', 'tree', 'four', 'five'];
                 <?php endforeach; ?>
             </div>
             <div class="w-100 d-flex justify-content-center">
-                <a href="/" class="link">
+                <a href="/catalog/" class="link">
                     ПОКАЗАТЬ ВСЮ ПРОДУКЦИЮ
                 </a>
             </div>
