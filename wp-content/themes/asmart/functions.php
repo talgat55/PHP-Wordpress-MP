@@ -586,6 +586,7 @@ function override_default_address_checkout_fields( $address_fields ) {
     $address_fields['last_name']['placeholder'] = 'Фамилия';
     $address_fields['address_1']['placeholder'] = 'Адрес';
     $address_fields['billing_phone']['placeholder'] = 'Телефон';
+//    $address_fields['email']['placeholder'] = 'Email';
     return $address_fields;
 }
 

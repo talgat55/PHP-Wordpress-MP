@@ -1699,6 +1699,12 @@
 .page-template-default {
   overflow-y: hidden; }
 
+.modal.show .modal-dialog {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 @media (max-width: 1200px) {
   .header__phone-item {
     margin-right: 30px; }
@@ -1833,13 +1839,6 @@
     -ms-flex-pack: start !important;
     -webkit-justify-content: start !important;
             justify-content: start !important; } }
-
-@media (min-width: 768px) {
-  .modal.show .modal-dialog {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); } }
 
 @media (max-width: 768px) {
   .home-slider_slider .home-slider_slider__item {

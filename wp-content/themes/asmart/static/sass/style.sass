@@ -1832,6 +1832,14 @@ $gray_color: #2a2d2f
 .product-template-default,
 .page-template-default
   overflow-y: hidden
+
+
+.modal.show .modal-dialog
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
 @media (max-width: 1200px)
   .header__phone-item
     margin-right: 30px
@@ -1987,12 +1995,7 @@ $gray_color: #2a2d2f
     -ms-flex-pack: start!important
     justify-content: start!important
 
-@media (min-width: 768px)
-  .modal.show .modal-dialog
-    top: 50%
-    -webkit-transform: translateY(-50%)
-    -ms-transform: translateY(-50%)
-    transform: translateY(-50%)
+//@media (min-width: 768px)
 
 @media (max-width: 768px)
   .home-slider_slider

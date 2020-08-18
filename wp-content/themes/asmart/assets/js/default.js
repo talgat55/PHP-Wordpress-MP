@@ -39,6 +39,13 @@ jQuery(document).ready(function () {
 
     //  init   animation blocks library
 
+    /*
+    *  Fix field email on page checkout
+    */
+    jQuery('#billing_email').attr("placeholder", "Email");
+
+
+
     // end redy function
 });
 //----------------------------------
