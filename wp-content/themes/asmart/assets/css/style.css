@@ -1705,6 +1705,29 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+.error_wrapper {
+  margin: 30px  auto  0 auto;
+  display: table; }
+  .error_wrapper .error__img {
+    position: relative; }
+    .error_wrapper .error__img .error__img_text {
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 43px;
+      text-align: center;
+      color: #005BD7;
+      position: absolute;
+      bottom: 29px;
+      left: 0;
+      right: 0; }
+
+.error_add_text {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  margin-top: 35px; }
+
 @media (max-width: 1200px) {
   .header__phone-item {
     margin-right: 30px; }
@@ -1862,9 +1885,14 @@
   header .logo svg {
     width: 100%; }
   header .header__search-cart-block {
-    margin-right: 35px; } }
+    margin-right: 35px; }
+  .error-page .error__img img {
+    max-width: 100%; } }
 
 @media (max-width: 600px) {
+  .error_wrapper .error__img .error__img_text {
+    font-size: 24px;
+    bottom: 0; }
   .page-main {
     padding-bottom: 40px !important; }
   .news-articles__cats {
